@@ -1,0 +1,17 @@
+<%= form_for(@post) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "入力" %>
+
+    <%= f.label :炭水化物 %>
+    <%= f.number_field :carb, class: 'form-control' %>
+
+    <%= f.label :タンパク質 %>
+    <%= f.number_field :protein, class: 'form-control' %>
+
+    <%= f.label :脂質 %>
+    <%= f.number_field :fat, class: 'form-control' %>
+
+  </div>
+  <%= f.submit "+", class: "btn btn-primary" %>
+<% end %>
