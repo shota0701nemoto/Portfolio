@@ -15,6 +15,8 @@ gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.4', require: false
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'
