@@ -43,6 +43,7 @@ end
 
 group :production do
   gem 'pg', '1.1.4'
+  gem 'fog', '1.42'
 end
 
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
