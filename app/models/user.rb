@@ -42,5 +42,9 @@ class User < ApplicationRecord
   def feed
     posts
   end
+  
+  def sum_of_carb_calorie
+    posts.pluck(:carb)
+  end
 
 end

@@ -6,9 +6,8 @@ class Post < ApplicationRecord
   validates :content, presence: true, length: { maximum: 140 }
   validate  :picture_size
 
-
   def sum_of_carb_calorie
-    carb * 4
+    posts.sum(:carb)
   end
 
   def sum_of_protein_calorie
