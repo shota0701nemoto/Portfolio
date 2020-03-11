@@ -20,9 +20,9 @@ class PostsController < ApplicationController
   end
 
   private
-
+  
     def post_params
-      params.require(:post).permit(:content,:carb,:protein,:fat)
+      params.require(:post).permit(:content,:carb,:protein,:fat,:picture)
     end
 
     def correct_user

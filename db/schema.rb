@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_07_161443) do
+ActiveRecord::Schema.define(version: 2020_03_11_020447) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_03_07_161443) do
     t.string "carb"
     t.string "protein"
     t.string "fat"
+    t.string "picture"
     t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end

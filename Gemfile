@@ -19,7 +19,7 @@ gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 
 group :development, :test do
-  gem 'sqlite3', '1.4.1'
+  gem 'sqlite3', '1.3.13'
   gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -42,7 +42,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '1.1.4'
+  gem 'pg', '0.20.0'
   gem 'fog', '1.42'
 end
 
