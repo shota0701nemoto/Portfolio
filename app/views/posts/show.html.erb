@@ -1,0 +1,38 @@
+<% provide(:title, "Micropost") %>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h1 class="image">
+      <%= link_to gravatar_for(@post.user, size: 50), @post.user %>
+    </h1>
+    <h4 class="user"><%= link_to @post.user.name, @post.user %></h4>
+
+    <section>
+      <div class="content">
+        <%= image_tag @post.picture.url unless @post.picture.blank?  %>
+      </div>
+      <div><%= @post.content %></div>
+      <div class ="timestamp">
+        Posted <%= time_ago_in_words(@post.created_at) %> ago.
+      </div>
+      <!-- like機能 -->
+      <div>
+        <% if current_user?(@post.user) %>
+          <%= link_to "投稿を削除する", @post, method: :delete,
+                                  data: { confirm: "本当に削除しますか?" },
+                                  class:"btn btn-danger btn-sm" %>
+        <% end %>
+      </div>
+      <!-- コメント機能 -->
+      <p></p>
+      <div class="col-md-6">
+        <% if @comments.any? %>
+        <ol class="microposts">
+          <%= render @comments %>
+        </ol>
+        <%= will_paginate @comments %>
+        <% end %>
+      </div>
+    </section>
+  </div>
+</div>

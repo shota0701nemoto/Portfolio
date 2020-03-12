@@ -1,10 +1,11 @@
 class StaticPagesController < ApplicationController
-  def home
+    
+    def home
     if logged_in?
       @post  = current_user.posts.build
       @feed_items = current_user.feed.paginate(page: params[:page])
       @carb = current_user.sum_of_carb_calorie
-      end
+    end
   end
 
   def help

@@ -1,6 +1,14 @@
 class PostsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :logged_in_user, only: [:show, :create, :destroy]
   before_action :correct_user,   only: :destroy
+
+  def show
+    @post = Post.find(params[:id])
+    @comment = current_user.comments.build
+    @comments = @post.comments.paginate(page: params[:page], per_page: 10)
+  end
+
+  
 
   def create
     @post = current_user.posts.build(post_params)
@@ -20,7 +28,7 @@ class PostsController < ApplicationController
   end
 
   private
-  
+
     def post_params
       params.require(:post).permit(:content,:carb,:protein,:fat,:picture)
     end
