@@ -42,7 +42,5 @@ class GymsController < ApplicationController
      def correct_user
        @gym = current_user.gyms.find_by(id: params[:id])
        redirect_to gyms_path if @gym.nil?
-
-
 end
 end
