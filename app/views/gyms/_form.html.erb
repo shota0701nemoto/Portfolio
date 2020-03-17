@@ -1,10 +1,11 @@
 <%= form_with(model: @gym, local: true) do |f| %>
+  <%= render 'shared/error_messages', object: @gym %>
 
   <%= f.label :ジム名 %>
   <%= f.text_field :name, class: 'form-control' %>
 
   <%= f.label :口コミ %>
-  <%= f.text_field :content, class: 'form-control' %>
+  <%= f.email_field :content, class: 'form-control' %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary" %>
 <% end %>

@@ -1,4 +1,4 @@
-<% provide(:title, "Micropost") %>
+<% provide(:title, "post") %>
 
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
@@ -23,7 +23,7 @@
                                   class:"btn btn-danger btn-sm" %>
         <% end %>
       </div>
-      <!-- コメント機能 -->
+      <div><%= render partial:'comments/comment_form' %></div>
       <p></p>
       <div class="col-md-6">
         <% if @comments.any? %>
