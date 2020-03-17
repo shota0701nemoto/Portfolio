@@ -40,8 +40,4 @@ class User < ApplicationRecord
     gyms
   end
   
-  def sum_of_carb_calorie
-    posts.pluck(:carb)
-  end
-
 end

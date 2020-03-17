@@ -15,23 +15,34 @@ class GymsController < ApplicationController
   @gym = Gym.find(params[:id])
   end
 
+  #ログインしたユーザーがジムを投稿する
   def create
    @gym = current_user.gyms.build(gym_params)
    if @gym.save
        flash[:success] = "投稿ありがとうございます!"
-       redirect_to gyms_path
+       redirect_to request.referrer ||  'gyms_path'
        else
-       render 'gyms/show'
+               @feed_items = []
+       render 'gyms/index'
        end
   end
 
   def destroy
+    @gym.destroy
+  flash[:success] = "ジムを削除しました"
+  redirect_to request.referrer ||  'gyms_path'
   end
 
   private
 
      def gym_params
-       params.permit(:name, :content)
+       params.require(:gym).permit(:name, :content)
      end
 
+     def correct_user
+       @gym = current_user.gyms.find_by(id: params[:id])
+       redirect_to gyms_path if @gym.nil?
+
+
+end
 end

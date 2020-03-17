@@ -1,5 +1,9 @@
 <li id="gym<%= gym.id %>">
   <span class="user"><%= link_to gym.user.name %></span>
   <span class="user"><%= link_to gym.name %></span>
-
+  <span class="user"><%= link_to gym.content %></span>
+  <% if current_user?(gym.user) %>
+     <%= link_to "delete実装中", gym, method: :delete,
+                                      data: { confirm: "You sure?" } %>
+   <% end %>
 </li>
