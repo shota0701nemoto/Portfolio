@@ -3,15 +3,16 @@ class CommentsController < ApplicationController
 
   def create
     @comment = current_user.comments.build(comment_params)
-    @comment.user_id = current_user.id
-    @comment.post_id = params[:post_id]
+    @comment.user_id = current_user.id #modelでcommentはuserに依存する
+    @comment.gym_id = params[:gym_id] #modelでcommentはgymに依存する
     if @comment.save
-      #@comment.post.create_notification_comment!(current_user, @comment.id)
+
+      
       flash[:success] = "コメントが投稿されました"
-      redirect_back(fallback_location: root_path)
+      redirect_back(fallback_location: gyms_path)
     else
       flash[:danger] = "正しく入力して下さい"
-      redirect_back(fallback_location: root_path)
+      redirect_back(fallback_location: gyms_path)
     end
   end
 

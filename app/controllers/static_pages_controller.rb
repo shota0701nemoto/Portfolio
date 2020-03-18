@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
-    
+
     def home
-    
+    #@gyms = gym.all
+
     end
   end
 

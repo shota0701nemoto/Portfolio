@@ -1,2 +1,11 @@
 <div><%= @gym.name %></div>
 <div><%= @gym.content %></div>
+
+<div><%= render partial:'comments/comment_form' %></div>
+<p></p>
+<div class="col-md-6">
+  <% if @comments.any? %>
+    <%= render @comments %>
+  <%= will_paginate @comments %>
+  <% end %>
+</div>
