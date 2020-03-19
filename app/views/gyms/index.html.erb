@@ -1,9 +1,5 @@
 口コミ一覧
 <%= render 'shared/post_form' %>
 投稿する
-<% if @feed_items.any? %>
-  <ol class="gyms">
-    <%= render @feed_items %>
-  </ol>
-  <%= will_paginate @feed_items %>
-<% end %>
+
+  <%= render @gyms %>
