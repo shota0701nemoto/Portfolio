@@ -17,6 +17,8 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
+gem 'rails_admin', '~> 2.0'
+gem 'cancancan'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'

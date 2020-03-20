@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_16_144757) do
+ActiveRecord::Schema.define(version: 2020_03_19_152531) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
@@ -49,10 +49,15 @@ ActiveRecord::Schema.define(version: 2020_03_16_144757) do
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin", default: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "password_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "comments", "gyms"
