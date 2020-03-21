@@ -8,6 +8,7 @@ class GymsController < ApplicationController
     #if logged_in?
         @gym  = current_user.gyms.build
 
+
         @gyms = Gym.paginate(page: params[:page])
       #end
 
