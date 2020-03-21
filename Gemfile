@@ -19,6 +19,12 @@ gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
+gem 'meta-tags' 
+gem 'redcarpet' 
+gem 'summernote-rails'
+gem 'ckeditor'
+
+
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'

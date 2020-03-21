@@ -3,7 +3,7 @@
 
 <div><%= render partial:'comments/comment_form' %></div>
 <p></p>
-<div class="col-md-6">
+<div class="comments">
   <% if @comments.any? %>
     <%= render @comments %>
   <%= will_paginate @comments %>

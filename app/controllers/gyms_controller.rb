@@ -7,17 +7,18 @@ class GymsController < ApplicationController
 
     #if logged_in?
         @gym  = current_user.gyms.build
-        
+
         @gyms = Gym.paginate(page: params[:page])
       #end
 
   end
 
   def show
+  #@gym = Gym.select("name")
   @gym = Gym.find(params[:id])
   @comment = Comment.new
   @comments = @gym.comments.paginate(page: params[:page], per_page: 10)
-  #@comments = [] #view側にnilが渡っても良いように記述
+
   end
 
   #ログインしたユーザーがジムを投稿する
