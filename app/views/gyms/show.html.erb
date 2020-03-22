@@ -1,7 +1,9 @@
 <div><%= @gym.name %></div>
 <div><%= @gym.content %></div>
+<%= image_tag @gym.picture.url unless @gym.picture.blank?  %>
 
-<div><%= render partial:'comments/comment_form' %></div>
+
+
 <p></p>
 <div class="comments">
   <% if @comments.any? %>
@@ -9,3 +11,5 @@
   <%= will_paginate @comments %>
   <% end %>
 </div>
+
+<div><%= render partial:'comments/comment_form' %></div>

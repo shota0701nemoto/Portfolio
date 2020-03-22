@@ -1,9 +1,10 @@
 <li id="gym<%= gym.id %>">
-  <span class="user"><%= link_to gym.user.name %> </span>
-  <span class="user"><%= link_to (gym.name), gym_path(gym) %></span>
-  <span class="user"><%= link_to gym.content %></span>
+  <%= link_to gym.user.name %>
+  <%= link_to (gym.name), gym_path(gym) %>
+  <%= link_to gym.content %>
+  <%= link_to (image_tag gym.picture.url) if gym_path(gym) %>
   <% if current_user?(gym.user) %>
-     <%= link_to "delete実装中", gym, method: :delete,
+     <%= link_to "削除", gym, method: :delete,
                                       data: { confirm: "You sure?" } %>
    <% end %>
 </li>
