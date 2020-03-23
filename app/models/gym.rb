@@ -7,4 +7,5 @@ class Gym < ApplicationRecord
   validates :user_id, presence: true
   validates :content, presence: true
   validates :name, presence: true
+  validates :picture, presence: true
 end

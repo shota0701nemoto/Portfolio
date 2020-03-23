@@ -18,8 +18,12 @@
 
   <div class="field">
     <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, id: "summernote", name: "本文" =>
+    $(document).ready(function() {
+    $('#summernote').summernote();
+  });
   </div>
+
 
   <div class="actions">
     <%= form.submit %>

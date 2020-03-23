@@ -33,6 +33,7 @@ class GymsController < ApplicationController
        end
   end
 
+  #投稿を削除
   def destroy
     @gym.destroy
   flash[:success] = "ジムを削除しました"
