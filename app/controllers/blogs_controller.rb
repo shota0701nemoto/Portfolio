@@ -1,14 +1,14 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
-  # GET /blogs
-  # GET /blogs.json
+
+
   def index
     @blogs = Blog.all
+    @title = "コラム"
   end
 
-  # GET /blogs/1
-  # GET /blogs/1.json
+
   def show
   end
 
@@ -37,8 +37,7 @@ class BlogsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /blogs/1
-  # PATCH/PUT /blogs/1.json
+  
   def update
     respond_to do |format|
       if @blog.update(blog_params)
@@ -62,12 +61,12 @@ class BlogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_blog
       @blog = Blog.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+
     def blog_params
       params.require(:blog).permit(:title, :body)
     end

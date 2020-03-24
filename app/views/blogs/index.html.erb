@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Blogs</h1>
+<h1><%= @title %></h1>
 
 <table>
   <thead>
@@ -19,7 +19,7 @@
         <td><%= link_to 'Show', blog %></td>
         <% if logged_in? %>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: '記事を削除しますか？' } %></td>
         <% end %>
       </tr>
     <% end %>

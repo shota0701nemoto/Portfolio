@@ -1,9 +1,9 @@
 class StaticPagesController < ApplicationController
 
-    def home
-    #@gyms = gym.all
-
-    end
+  def home
+    @title = "ジムの口コミ"
+    @description = "ジムの口コミを調べることができるサイトです"
+    @keywords = "some keywords"
   end
 
   def help
@@ -14,3 +14,4 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+end
