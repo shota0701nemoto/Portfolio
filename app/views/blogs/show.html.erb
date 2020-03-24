@@ -9,6 +9,7 @@
   <strong>Body:</strong>
   <%= @blog.body %>
 </p>
-
+<% if logged_in? %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+<% end %>
