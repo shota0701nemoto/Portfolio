@@ -25,6 +25,7 @@ gem 'summernote-rails'
 gem 'ckeditor'
 gem 'meta-tags'
 gem 'sitemap_generator'
+gem 'rails-i18n', '~> 6.0.0'
 
 
 
