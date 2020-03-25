@@ -13,5 +13,6 @@ class StaticPagesController < ApplicationController
   end
 
   def contact
+      @title = "問い合わせ"
   end
 end

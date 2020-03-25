@@ -24,6 +24,7 @@ gem 'redcarpet'
 gem 'summernote-rails'
 gem 'ckeditor'
 gem 'meta-tags'
+gem 'sitemap_generator'
 
 
 
