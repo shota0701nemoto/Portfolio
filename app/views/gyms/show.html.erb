@@ -1,13 +1,17 @@
 <div><%= @gym.name %></div>
 <div><%= @gym.content %></div>
-<%= image_tag @gym.picture.url unless @gym.picture.blank?  %>
+<% if @gym.picture? %>
+  <% if @gym.picture.each do |picture| %>
+  <%= image_tag(picture.url) %>
+  <% end %>
+<% end %>
 
 
 
 
 <div class="comments">
   <% if @comments.any? %>
-    <%= render @comments %>
+  <%= render @comments %>
   <%= will_paginate @comments %>
   <% end %>
 </div>
