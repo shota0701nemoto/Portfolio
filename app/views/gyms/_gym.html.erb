@@ -2,9 +2,12 @@
   <%= link_to gym.user.name %>
   <%= link_to (gym.name), gym_path(gym) %>
   <%= link_to gym.content %>
-  <%= link_to (image_tag gym.picture.url) if gym_path(gym) %>
+
+  <% @gym.pictures.each do |picture| %>
+  <%= link_to (image_tag gym.pictures.urls)  %>
+  <% end %>
   <% if current_user?(gym.user) %>
      <%= link_to "削除", gym, method: :delete,
-                                      data: { confirm: "You sure?" } %>
+                                      data: { confirm: "削除しますか？" } %>
    <% end %>
 </li>

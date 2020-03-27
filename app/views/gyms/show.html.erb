@@ -1,7 +1,7 @@
 <div><%= @gym.name %></div>
 <div><%= @gym.content %></div>
 <% if @gym.picture? %>
-  <% if @gym.picture.each do |picture| %>
+  <% @gym.picture.each do |picture| %>
   <%= image_tag(picture.url) %>
   <% end %>
 <% end %>

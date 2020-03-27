@@ -1,4 +1,4 @@
 口コミ
-  <%= render @gyms %>
+<%= render @gyms %>
 
-<%= render 'shared/post_form' %>
+<%= render partial: 'shared/post_form', locals: {gym: @gym} %>
