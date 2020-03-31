@@ -19,14 +19,15 @@ gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
-gem 'meta-tags' 
-gem 'redcarpet' 
+gem 'meta-tags'
+gem 'redcarpet'
 gem 'summernote-rails'
 gem 'ckeditor'
 gem 'meta-tags'
 gem 'sitemap_generator'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'paperclip'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
 
 
