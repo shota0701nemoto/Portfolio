@@ -1,4 +1,4 @@
 口コミ
-<%= render @gyms %>
+<%= render partial: 'gym', collection: @gyms, as: :gym %>
 
 <%= render partial: 'shared/post_form', locals: {gym: @gym} %>

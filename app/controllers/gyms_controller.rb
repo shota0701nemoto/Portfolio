@@ -4,6 +4,7 @@ class GymsController < ApplicationController
 
   def index
     @gym  = current_user.gyms.build
+       #debugger
     @gyms = Gym.all.order(created_at: :desc)
   end
 
