@@ -1,31 +1,22 @@
-<p id="notice"><%= notice %></p>
-
 <h1><%= @title %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="col-sm-3 col-xs-6">
+  <div class="blogbox">
     <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <% if logged_in? %>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: '記事を削除しますか？' } %></td>
-        <% end %>
-      </tr>
+    <div class="blogtitle clearfix">
+      <%= blog.title %>
+    </div>
+    <div class="blogbody clearfix">
+      <%= blog.body %>
+    </div>
+    <div class="productCaption clearfix">
+      <%= link_to 'Show', blog %>
+      <% if logged_in? %>
+      <%= link_to 'Edit', edit_blog_path(blog) %>
+      <%= link_to 'Destroy', blog, method: :delete, data: { confirm: '記事を削除しますか？' } %>
+    </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
+    <% end %>
+  </div>
+</div>
 <%= link_to 'New Blog', new_blog_path %>
