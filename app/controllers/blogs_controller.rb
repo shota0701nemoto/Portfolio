@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
 
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.paginate(page: params[:page], per_page: 9)
     @title = "コラム"
   end
 
@@ -28,7 +28,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
+        format.html { redirect_to @blog, notice: '投稿しました' }
         format.json { render :show, status: :created, location: @blog }
       else
         format.html { render :new }
@@ -37,11 +37,11 @@ class BlogsController < ApplicationController
     end
   end
 
-  
+
   def update
     respond_to do |format|
       if @blog.update(blog_params)
-        format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to @blog, notice: '更新しました' }
         format.json { render :show, status: :ok, location: @blog }
       else
         format.html { render :edit }
@@ -55,7 +55,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to blogs_url, notice: '削除しました' }
       format.json { head :no_content }
     end
   end

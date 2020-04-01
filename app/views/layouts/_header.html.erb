@@ -6,7 +6,6 @@
         <li><%= link_to "お問い合わせ", help_path %></li>
         <li><%= link_to "コラム", blogs_path %></li>
         <% if logged_in? %>
-        <li><%= link_to "ユーザー", users_path %></li>
         <li><%= link_to "口コミ", gyms_path %></li>
         <% if current_user.try(:admin?) %>
         <li><%= link_to "管理画面", "/admin" %></li>
