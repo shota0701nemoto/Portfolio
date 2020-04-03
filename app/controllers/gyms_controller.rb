@@ -5,7 +5,7 @@ class GymsController < ApplicationController
   def index
     @gym  = current_user.gyms.build
        #debugger
-    @gyms = Gym.all.order(created_at: :desc)
+    @gyms = Gym.paginate(page: params[:page], per_page: 9)
   end
 
   def new

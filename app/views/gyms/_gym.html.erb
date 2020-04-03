@@ -1,12 +1,22 @@
-<li id="gym<%= gym.id %>">
-  <%= link_to gym.user.name %>
-  <%= link_to (gym.name), gym_path(gym) %>
-  <%= link_to gym.content %>
-  <% gym.picture.each do |picture| %>
-    <%= image_tag picture.url  %>
-  <% end %>
-  <% if current_user?(gym.user) %>
-     <%= link_to "削除", gym, method: :delete,
-                                      data: { confirm: "削除しますか？" } %>
-   <% end %>
-</li>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="gymbox">
+        <div class="gymtitle">
+          <%= link_to (gym.name), gym_path(gym) %>
+        </div>
+        <div class="delete">
+          <% if current_user?(gym.user) %>
+          <%= link_to "削除", gym, method: :delete,
+          data: { confirm: "削除しますか？" } %>
+          <% end %>
+        </div>
+        <div class="gympicture">
+          <% gym.picture.each do |picture| %>
+          <%= image_tag picture.url  %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

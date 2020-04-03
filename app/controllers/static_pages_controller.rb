@@ -7,12 +7,10 @@ class StaticPagesController < ApplicationController
   end
 
   def help
+      @title = "問い合わせ"
   end
 
   def about
   end
 
-  def contact
-      @title = "問い合わせ"
-  end
 end

@@ -1,1 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Arvo');
+.gymbox {
+  height: 400px;
+  text-align: center;
+  background: #fff;
+  border-radius: 30px;
+  padding : 20px;
+  box-shadow: 0 2px 5px #ccc;
+  margin : 10px;
+}
+
+.gymtitle {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.delete{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.gympicture img {
+width: 80%;
+}

@@ -1,19 +1,18 @@
-<div><%= @gym.name %></div>
-<div><%= @gym.content %></div>
-<% if @gym.picture? %>
-  <% @gym.picture.each do |picture| %>
-  <%= image_tag(picture.url) %>
-  <% end %>
-<% end %>
-
-
-
-
-<div class="comments">
-  <% if @comments.any? %>
-  <%= render @comments %>
-  <%= will_paginate @comments %>
-  <% end %>
+<div class="show-gymbox">
+  <p class="text-center"><%= @gym.name %></p>
+  <h4 class ="p-3"> <%= @gym.content %></h4>
+  <div class="picturebox">
+    <% if @gym.picture? %>
+    <% @gym.picture.each do |picture| %>
+    <%= image_tag(picture.url) %>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="comment">
+    <% if @comments.any? %>
+    <%= render @comments %>
+    <%= will_paginate @comments %>
+    <% end %>
+  </div>
 </div>
-
-<div><%= render partial:'comments/comment_form' %></div>
+<%= render partial:'comments/comment_form' %>

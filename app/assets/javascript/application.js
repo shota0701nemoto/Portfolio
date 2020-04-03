@@ -1,3 +1,4 @@
-//= require jquery3
+//= require jquery
+//= require rails-ujs
 //= require popper
 //= require bootstrap-sprockets

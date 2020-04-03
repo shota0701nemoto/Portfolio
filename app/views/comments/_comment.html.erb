@@ -1,12 +1,11 @@
-<li id="comment-<%= comment.id %>">
-  <%= link_to gravatar_for(comment.user, size: 50), comment.user %>
-  <span class="user"><%= link_to comment.user.name, comment.user %></span>
-  <span class="content"><%= comment.content %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(comment.created_at) %> ago.
-  </span>
-  <% if current_user?(comment.user) %>
-      <%= link_to "コメント削除", comment, method: :delete,
-                                    data: { confirm: "本当に削除しますか?" } %>
-    <% end %>
-</li>
+<div class="list-group">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><%= comment.content %></h5>
+        <small><%= time_ago_in_words(comment.created_at) %></small>
+        <small><% if current_user?(comment.user) %>
+            <%= link_to "削除", comment, method: :delete,
+                                          data: { confirm: "本当に削除しますか?" } %>
+          <% end %>
+        </small>
+      </div>
+  </div>

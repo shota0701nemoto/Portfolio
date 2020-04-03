@@ -1,4 +1,8 @@
 口コミ
+
+
 <%= render partial: 'gym', collection: @gyms, as: :gym %>
 
 <%= render partial: 'shared/post_form', locals: {gym: @gym} %>
+
+<%= will_paginate @gyms, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
