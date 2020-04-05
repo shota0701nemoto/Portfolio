@@ -12,9 +12,8 @@
           <% end %>
         </div>
         <div class="gympicture">
-          <% gym.picture.each do |picture| %>
-          <%= image_tag picture.url  %>
-          <% end %>
+          <%= image_tag gym.picture.first.url  %>
+
         </div>
       </div>
     </div>
