@@ -7,9 +7,6 @@
     <% end %>
     <% end %>
     </div>
-  <h4 class ="ctitle"> <%= @gym.content %></h4>
-  <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
-
   <div class="sidebar">
     <div class="sidebar__item">
        <h4 class ="recent_post">人気記事</h4>
@@ -21,7 +18,7 @@
                <%= blog.title %>
              </div>
              <div class="productCaption clearfix">
-               
+
                <%= link_to 'Show', blog_path(blog.id) %>
                <% if logged_in? %>
              </div>
@@ -34,6 +31,8 @@
        </ul>
     </div>
   </div>
+  <h4 class ="ctitle"> <%= @gym.content %></h4>
+  <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
   <p>
     <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       コメントを表示
