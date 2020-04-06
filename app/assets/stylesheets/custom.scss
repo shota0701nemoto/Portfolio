@@ -11,31 +11,52 @@ h1{
 }
 
 //gym showアクション//
-.text-center{
- font-size: 40px;
- 
+ .gym_name {
+   width :500px;
+	margin-left: 5px;
+  box-shadow: 0 0 5px #ccc;
+  border-top: solid 4px gray;
+  font-size:50px;
+  padding: 20px;
 }
 
-.p-3{
+.show-gymbox{
+  padding-left: 90px;
+}
+
+.ctitle {
+	font-weight: 700;
+	margin-bottom: 30px;
+  margin-top: 45px;
+}
+
+.img-responsive{
+ max-width: 10px;
+ margin-top: 45px;
+}
+
+.sidebar {
+  width:250px;
+  min-height:400px;
+  height:auto;
+
   float:right;
-  height:200px;
-  width:400px;
-  margin-top: 30px;
-  margin-right: 200px;
-  border: 1px solid #009347;
-  display: table-cell;
-  vertical-align: top;
-
+  margin-top:-420px;
 }
 
-.list-group{
-text-align:right;
-margin-right: 210px;
-margin-top: 30px;
+.sidebar__item {
+  margin-bottom: 20px;
 }
 
-.picturebox{
-  margin-top: 60px;
-margin-left: 70px;
-vertical-align: top;
+.recent_post{
+  padding-bottom:10px;
+  border-bottom: solid 4px gray;
+  font-size:22px;
+}
+.sidebar_row{
+  list-style: none;
+  margin-left: -30px;
+}
+.gym_sidebar_title {
+  font-size:17px;
 }

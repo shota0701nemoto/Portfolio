@@ -1,18 +1,51 @@
 <div class="show-gymbox">
-  <p class="text-center"><%= @gym.name %></p>
-  <h4 class ="p-3"> <%= @gym.content %></h4>
-  <div class="picturebox">
+  <h2 class ="gym_name"><%= @gym.name %></h2>
+  <div class="img-responsive">
     <% if @gym.picture? %>
     <% @gym.picture.each do |picture| %>
     <%= image_tag(picture.url) %>
     <% end %>
     <% end %>
+    </div>
+  <h4 class ="ctitle"> <%= @gym.content %></h4>
+  <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
+
+  <div class="sidebar">
+    <div class="sidebar__item">
+       <h4 class ="recent_post">人気記事</h4>
+       <ul class="popular-posts">
+         <li class="sidebar_row">
+         <% @blogs.each do |blog| %>
+           <div class="sidebar_blogbox">
+             <div class="gym_sidebar_title clearfix">
+               <%= blog.title %>
+             </div>
+             <div class="productCaption clearfix">
+               <%= link_to 'Show', blog %>
+               <% if logged_in? %>
+             </div>
+             <% end %>
+           </div>
+
+         <% end %>
+         </li>
+
+       </ul>
+    </div>
   </div>
-  <div class="comment">
-    <% if @comments.any? %>
-    <%= render @comments %>
-    <%= will_paginate @comments %>
-    <% end %>
+  <p>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      コメントを表示
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <div class="comment">
+        <% if @comments.any? %>
+        <%= render @comments %>
+        <%= will_paginate @comments %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
-<%= render partial:'comments/comment_form' %>
