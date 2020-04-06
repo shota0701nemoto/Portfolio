@@ -1,6 +1,6 @@
 <div class="show-gymbox">
   <h2 class ="gym_name"><%= @gym.name %></h2>
-  <div class="img-responsive">
+  <div class="gym_picture">
     <% if @gym.picture? %>
     <% @gym.picture.each do |picture| %>
     <%= image_tag(picture.url) %>
@@ -21,7 +21,8 @@
                <%= blog.title %>
              </div>
              <div class="productCaption clearfix">
-               <%= link_to 'Show', blog %>
+               
+               <%= link_to 'Show', blog_path(blog.id) %>
                <% if logged_in? %>
              </div>
              <% end %>

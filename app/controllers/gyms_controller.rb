@@ -17,7 +17,6 @@ class GymsController < ApplicationController
     @comment = Comment.new
     @comments = @gym.comments.paginate(page: params[:page], per_page: 10)
 
-    @blog = Blog.find(params[:id])
     @blogs = Blog.all
   end
 
