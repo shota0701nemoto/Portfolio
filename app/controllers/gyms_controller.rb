@@ -22,7 +22,7 @@ class GymsController < ApplicationController
 
   #ログインしたユーザーがジムを投稿する
   def create
-    @gym = current_user.gyms.build(gym_params)
+    @gym = Gyms.build(gym_params)
     @gym.picture = params[:picture]
     if @gym.save
       flash[:success] = "投稿ありがとうございます!"
