@@ -14,7 +14,7 @@ h1{
  .gym_name {
    width :auto;
    max-width: 800px;
-	margin-left: 5px;
+	margin-left: -10px;
   box-shadow: 0 0 5px #ccc;
   border-top: solid 4px gray;
   font-size:50px;
@@ -25,14 +25,16 @@ h1{
   padding-left: 90px;
 }
 
+
 .ctitle {
 	font-weight: 700;
 	margin-bottom: 30px;
   margin-top: 45px;
   width:700px;
+  margin-left: -20px;
 }
 
-.gym_picture{
+.container-fluid{
  display: inline-block;
  max-width: 10px;
  margin-top: 45px;
@@ -46,7 +48,8 @@ h1{
   min-height:400px;
   height:auto;
   float:right;
-  margin-top:0px;
+  margin-top:-450px;
+  margin-right:-40px;
 }
 
 .sidebar__item {
