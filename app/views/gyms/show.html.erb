@@ -1,51 +1,79 @@
+<div class="sidebar">
+  <div class="sidebar__item">
+    <h4 class ="recent_post">人気記事</h4>
+    <ul class="popular-posts">
+      <li class="sidebar_row">
+        <% @blogs.each do |blog| %>
+        <div class="sidebar_blogbox">
+          <div class="gym_sidebar_title clearfix">
+            <%= blog.title %>
+          </div>
+          <div class="productCaption clearfix">
+            <%= link_to 'Show', blog_path(blog.id) %>
+            <% if logged_in? %>
+          </div>
+          <% end %>
+        </div>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
 <div class="show-gymbox">
   <h2 class ="gym_name"><%= @gym.name %></h2>
   <div class="gym_picture">
     <div class="row">
-    <% if @gym.picture? %>
-    <% @gym.picture.each do |picture| %>
-    <%= image_tag(picture.url) %>
-    <% end %>
-    <% end %>
-    </div>
-     </div>
-     <h4 class ="ctitle"> <%= @gym.content %></h4>
-     <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
-     <p>
-       <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-         コメントを表示
-       </button>
-     </p>
-    </div>
-  <div class="sidebar">
-    <div class="sidebar__item">
-       <h4 class ="recent_post">人気記事</h4>
-       <ul class="popular-posts">
-         <li class="sidebar_row">
-         <% @blogs.each do |blog| %>
-           <div class="sidebar_blogbox">
-             <div class="gym_sidebar_title clearfix">
-               <%= blog.title %>
-             </div>
-             <div class="productCaption clearfix">
-               <%= link_to 'Show', blog_path(blog.id) %>
-               <% if logged_in? %>
-             </div>
-             <% end %>
-           </div>
-         <% end %>
-         </li>
+      <% if @gym.picture[0].present? %>
+      <div class="col-6">
+        <%= image_tag "#{@gym.picture[0].url}" %>
+        <% end %>
+      </div>
+      <% if @gym.picture[1].present? %>
+      <div class="col-4">
+        <%= image_tag "#{@gym.picture[1].url}" %>
+        <% end %>
 
-       </ul>
-    </div>
-  </div>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
-      <div class="comment">
-        <% if @comments.any? %>
-        <%= render @comments %>
-        <%= will_paginate @comments %>
+        <% if @gym.picture[2].present? %>
+        <%= image_tag "#{@gym.picture[2].url}" %>
+        <% end %>
+
+        <% if @gym.picture[3].present? %>
+
+        <%= image_tag "#{@gym.picture[3].url}" %>
+        <% end %>
+
+        <% if @gym.picture[4].present? %>
+
+        <%= image_tag "#{@gym.picture[4].url}" %>
+        <% end %>
+
+        <% if @gym.picture[5].present? %>
+
+        <%= image_tag "#{@gym.picture[5].url}" %>
+        <% end %>
+
+        <% if @gym.picture[6].present? %>
+
+        <%= image_tag "#{@gym.picture[6].url}" %>
         <% end %>
       </div>
     </div>
   </div>
+  <h4 class ="ctitle"> <%= @gym.content %></h4>
+  <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
+  <p>
+    <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      コメントを表示
+    </button>
+  </p>
+</div>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <div class="comment">
+      <% if @comments.any? %>
+      <%= render @comments %>
+      <%= will_paginate @comments %>
+      <% end %>
+    </div>
+  </div>
+</div>
