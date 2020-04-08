@@ -30,31 +30,9 @@
       </div>
       <% if @gym.picture[1].present? %>
       <div class="col-4">
-        <%= image_tag "#{@gym.picture[1].url}" %>
+        <% @gym.picture.each_with_index do |picture,index| %>
+    <%= image_tag "#{@gym.picture[index].url}" %>
         <% end %>
-
-        <% if @gym.picture[2].present? %>
-        <%= image_tag "#{@gym.picture[2].url}" %>
-        <% end %>
-
-        <% if @gym.picture[3].present? %>
-
-        <%= image_tag "#{@gym.picture[3].url}" %>
-        <% end %>
-
-        <% if @gym.picture[4].present? %>
-
-        <%= image_tag "#{@gym.picture[4].url}" %>
-        <% end %>
-
-        <% if @gym.picture[5].present? %>
-
-        <%= image_tag "#{@gym.picture[5].url}" %>
-        <% end %>
-
-        <% if @gym.picture[6].present? %>
-
-        <%= image_tag "#{@gym.picture[6].url}" %>
         <% end %>
       </div>
     </div>
