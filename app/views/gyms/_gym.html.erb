@@ -5,12 +5,6 @@
         <div class="gymtitle">
           <%= link_to (gym.name), gym_path(gym) %>
         </div>
-        <div class="delete">
-          <% if current_user?(gym.user) %>
-          <%= link_to "削除", gym, method: :delete,
-          data: { confirm: "削除しますか？" } %>
-          <% end %>
-        </div>
         <div class="gympicture">
           <%= image_tag gym.picture.first.url  %>
 

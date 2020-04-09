@@ -28,7 +28,8 @@ class GymsController < ApplicationController
       flash[:success] = "投稿ありがとうございます!"
       redirect_to request.referrer ||  'gyms_path'
     else
-      render 'gyms/index'
+      flash[:errors] = @gym.errors.full_messages
+      redirect_to request.referrer ||  'gyms_path'
     end
   end
 
