@@ -10,6 +10,8 @@ class BlogsController < ApplicationController
 
 
   def show
+      @gyms = Gym.all
+      @blogs = Blog.all
   end
 
   # GET /blogs/new

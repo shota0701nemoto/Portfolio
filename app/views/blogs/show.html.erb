@@ -2,6 +2,23 @@
 
 <h1 class ="title"><%= @blog.title %></h1>
 
+<div class="sidebar">
+  <div class="sidebar__item">
+    <h4 class ="recent_post">人気記事</h4>
+    <ul class="popular-posts">
+      <li class="sidebar_row">
+
+        <div class="sidebar_blogbox">
+          <div class="gym_sidebar_title clearfix">
+            <%= link_to (@blog.title), blog_path(@blog) %>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
   <div class ="show-blogbox">
     <%= @blog.body %>
   </div>
