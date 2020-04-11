@@ -6,10 +6,10 @@
 <div class="col-md-4">
   <div class="blogbox">
     <div class="blogtitle clearfix">
-      <%= blog.title %>
+      <%= link_to (blog.title), blog_path(blog) %>
     </div>
     <div class="productCaption clearfix">
-      <%= link_to 'Show', blog %>
+
       <% if logged_in? %>
       <%= link_to 'Edit', edit_blog_path(blog) %>
       <%= link_to 'Destroy', blog, method: :delete, data: { confirm: '記事を削除しますか？' } %>
