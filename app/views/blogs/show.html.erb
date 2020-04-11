@@ -1,6 +1,10 @@
 <% set_meta_tags title: @blog.title %>
 
-  <%= @blog.body %>
+<h1 class ="title"><%= @blog.title %></h1>
+
+  <div class ="show-blogbox">
+    <%= @blog.body %>
+  </div>
 
 <% if logged_in? %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
