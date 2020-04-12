@@ -11,14 +11,14 @@
 </div>
 <% end %>
 
-<div class="field">
-  <%= form.label :title %>
-  <%= form.text_field :title %>
+<div class="title_field">
+  <%= form.label :タイトル %>
+  <%= form.text_field :title ,:size=>"60x30" %>
 </div>
 
-<div class="field">
-  <%= form.label :body %>
-  <%= form.text_area :body, id: "summernote", name: "blog[body]" %>
+<div class="body_field">
+  <%= form.label :本文 %>
+  <%= form.text_area :body, id: "summernote", name: "blog[body]",:size=>"60x30" %>
   <script>
     $(document).ready(function() {
       $('#summernote').summernote();

@@ -37,4 +37,10 @@ crumb :edit_user do
   parent :root
 end
 
+#blogの新規作成ページのパンくずリスト
+crumb :new_blog do
+  link "新規作成", new_blog_path
+  parent :blogs
+end
+
 

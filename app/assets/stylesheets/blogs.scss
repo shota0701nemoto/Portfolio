@@ -29,8 +29,8 @@
 }
 
 .title{
-  margin-top:50px;
-  margin-left:-100px;
+  margin-top:35px;
+  margin-left:-150px;
 }
 
 .show-blogbox{
@@ -46,6 +46,29 @@ font-size:20px;
 .sidebar {
   position:absolute;
   width:250px;
-  margin-top:110px;
+  margin-top:70px;
   margin-left:900px;
+}
+
+//newアクション//
+.blog_form{
+  margin-top:70px;
+}
+
+//_form.html.erb//
+.title_field{
+margin-bottom:70px;
+width:300px;
+font-size:30px;
+}
+
+.body_field{
+margin-bottom:70px;
+width:1140px;
+font-size:30px;
+height:600px;
+}
+
+.actions{
+  font-size:20px;
 }

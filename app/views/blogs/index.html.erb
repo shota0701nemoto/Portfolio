@@ -9,12 +9,7 @@
       <%= link_to (blog.title), blog_path(blog) %>
     </div>
     <div class="productCaption clearfix">
-
-      <% if logged_in? %>
-      <%= link_to 'Edit', edit_blog_path(blog) %>
-      <%= link_to 'Destroy', blog, method: :delete, data: { confirm: '記事を削除しますか？' } %>
     </div>
-    <% end %>
   </div>
   </div>
 <% end %>
