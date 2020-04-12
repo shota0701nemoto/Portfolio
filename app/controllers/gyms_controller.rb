@@ -3,7 +3,7 @@ class GymsController < ApplicationController
   before_action :correct_user,   only: :destroy
 
   def index
-    
+
     @gym  = current_user.gyms.build
        #debugger
     @gyms = Gym.paginate(page: params[:page], per_page: 9)
@@ -14,6 +14,7 @@ class GymsController < ApplicationController
   end
 
   def show
+
     @gym = Gym.find(params[:id])
     @comment = Comment.new
     @comments = @gym.comments.paginate(page: params[:page], per_page: 10)
