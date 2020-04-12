@@ -1,3 +1,5 @@
+<% breadcrumb :gym, @gym %>
+
 <div class="sidebar">
   <div class="sidebar__item">
     <h4 class ="recent_post">人気記事</h4>
@@ -16,6 +18,7 @@
 </div>
 <div class="show-gymbox">
   <h2 class ="gym_name"><%= @gym.name %></h2>
+
   <div class="gym_picture">
     <div class="row">
       <% if @gym.picture[0].present? %>

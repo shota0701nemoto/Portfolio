@@ -1,5 +1,5 @@
 <% set_meta_tags title: @blog.title %>
-
+<% breadcrumb :blog, @blog %>
 <h1 class ="title"><%= @blog.title %></h1>
 
 <div class="sidebar">
@@ -23,7 +23,9 @@
     <%= @blog.body %>
   </div>
 
-<% if logged_in? %>
+<% if current_user?(@blog.user) %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<%= link_to "削除", @gym, method: :delete,
+data: { confirm: "削除しますか？" } %>
 <% end %>
+<%= link_to 'Back', blogs_path %>

@@ -20,6 +20,7 @@
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.16/dist/summernote.min.js"></script>
 </head>
 <body>
+  <%= breadcrumbs  separator: " &rsaquo; " %>
   <%= render 'layouts/header' %>
   <div class="container">
     <% flash.each do |message_type, message| %>
