@@ -6,7 +6,7 @@ class GymsController < ApplicationController
 
     @gym  = current_user.gyms.build
        #debugger
-    @gyms = Gym.paginate(page: params[:page], per_page: 9)
+    @gyms = Gym.paginate(page: params[:page], per_page: 18)
   end
 
   def new
@@ -18,7 +18,6 @@ class GymsController < ApplicationController
     @gym = Gym.find(params[:id])
     @comment = Comment.new
     @comments = @gym.comments.paginate(page: params[:page], per_page: 10)
-
     @blogs = Blog.all
   end
 
@@ -37,9 +36,9 @@ class GymsController < ApplicationController
 
   #投稿を削除
   def destroy
-    @gym.destroy
+      Gym.find(params[:id]).destroy
     flash[:success] = "ジムを削除しました"
-    redirect_to request.referrer ||  'gyms_path'
+  redirect_to gyms_path
   end
 
   private

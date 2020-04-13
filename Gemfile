@@ -10,11 +10,10 @@ gem 'bootstrap-sass', '3.4.1'
 gem 'puma',       '3.12.1'
 gem 'sass-rails', '5.1.0'
 gem 'webpacker',  '4.0.7'
-gem 'turbolinks', '5.2.0'
 gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.4', require: false
 gem 'jquery-rails'
-gem 'jquery-turbolinks'
+
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'rails_admin', '~> 2.0'
