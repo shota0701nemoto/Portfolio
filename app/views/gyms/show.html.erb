@@ -36,15 +36,15 @@
     </div>
   </div>
   <h4 class ="ctitle"> <%= @gym.content %></h4>
-  <div class="delete">
+  <button type="button" class="btn btn-success">
     <% if current_user?(@gym.user) %>
     <%= link_to "削除", @gym, method: :delete,
     data: { confirm: "削除しますか？" } %>
     <% end %>
-  </div>
-  <div class="back">
+  </button>
+  <button type="button" class="btn btn-success">
   <%= link_to '戻る', gyms_path %>
-  </div>
+  </button>
   <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
   <p>
     <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">

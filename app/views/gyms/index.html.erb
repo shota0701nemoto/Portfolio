@@ -1,11 +1,9 @@
-口コミ
-
-  <% breadcrumb :gyms %>
-
-
-
-<%= render partial: 'gym', collection: @gyms, as: :gym %>
-
+<h1>口コミ</h1>
+<% breadcrumb :gyms %>
+<div class="container">
+  <div class="row">
+    <%= render partial: 'gym', collection: @gyms, as: :gym %>
+  </div>
+</div>
 <%= render partial: 'shared/post_form', locals: {gym: @gym} %>
-
 <%= will_paginate @gyms, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

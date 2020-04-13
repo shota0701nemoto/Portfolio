@@ -14,7 +14,7 @@
   </div>
 <% end %>
 </div>
-<div class="link"><%= link_to '投稿する', new_blog_path %></div>
+<button type="button" class="btn btn-success"><%= link_to '投稿する', new_blog_path %></button>
 </div>
 
 <%= will_paginate @blogs, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

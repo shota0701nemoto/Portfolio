@@ -158,3 +158,22 @@ text-align: center;
   font-size:15px;
 
 }
+
+//_post_form.html.erb//
+.gym_name_form{
+  width:500px;
+}
+
+.gym_content_form{
+  width:900px;
+}
+
+.gym_picture_form{
+padding-top:10px;
+padding-bottom:20px;
+}
+
+//sessionsコントローラ・newアクション//
+.signup{
+  padding-top:15px;
+}

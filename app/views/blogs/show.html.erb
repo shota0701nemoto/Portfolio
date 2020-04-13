@@ -12,7 +12,7 @@
           <div class="gym_sidebar_title clearfix">
             <%= link_to (gym.name), gym_path(@gyms) %>
           </div>
-<% end %>
+       <% end %>
         </div>
       </li>
     </ul>
@@ -24,8 +24,7 @@
   </div>
 
 <% if current_user?(@blog.user) %>
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to "削除", @gym, method: :delete,
-data: { confirm: "削除しますか？" } %>
+<button type="button" class="btn btn-success"><%= link_to '編集', edit_blog_path(@blog) %> </button>
+<button type="button" class="btn btn-success"><%= link_to "削除", @gym, method: :delete,
+data: { confirm: "削除しますか？" } %></button>
 <% end %>
-<%= link_to 'Back', blogs_path %>
