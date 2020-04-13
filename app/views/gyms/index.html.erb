@@ -5,5 +5,6 @@
     <%= render partial: 'gym', collection: @gyms, as: :gym %>
   </div>
 </div>
-<%= render partial: 'shared/post_form', locals: {gym: @gym} %>
+<button type="button" class="btn btn-success"><%= link_to '投稿する', new_gym_path %></button>
+
 <%= will_paginate @gyms, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

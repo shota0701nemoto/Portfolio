@@ -13,6 +13,12 @@ crumb :gym do |gym|
   parent :gyms
 end
 
+#gymの新規作成ページのパンくずリスト
+crumb :new_gym do
+  link "新規作成", new_gym_path
+  parent :gyms
+end
+
 
 # blog一覧ページヘのパンくずリスト
 crumb :blogs do

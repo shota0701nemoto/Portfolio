@@ -10,11 +10,11 @@ class GymsController < ApplicationController
   end
 
   def new
-    @gym = gym.new
+    @gym = Gym.new
   end
 
   def show
-
+    @gyms = Gym.all
     @gym = Gym.find(params[:id])
     @comment = Comment.new
     @comments = @gym.comments.paginate(page: params[:page], per_page: 10)

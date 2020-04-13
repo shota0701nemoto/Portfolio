@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
   def show
 
     @gyms = Gym.all
-    @gym = Blog.find(params[:id])
+    @blog = Blog.find(params[:id])
       @blogs = Blog.all
   end
 

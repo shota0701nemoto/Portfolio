@@ -10,7 +10,7 @@
        <% @gyms.each do |gym| %>
         <div class="sidebar_blogbox">
           <div class="gym_sidebar_title clearfix">
-            <%= link_to (gym.name), gym_path(@gyms) %>
+            <%= link_to (gym.name), gym_path(gym) %>
           </div>
        <% end %>
         </div>
