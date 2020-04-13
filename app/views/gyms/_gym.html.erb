@@ -1,5 +1,4 @@
-    <div class="col-md-6">
-      <% @gyms.each do |gym| %>
+    <div class="col-lg-2">
       <div class="gymbox">
         <div class="gymtitle">
           <%= link_to (gym.name), gym_path(gym) %>
@@ -7,8 +6,6 @@
         <div class="gympicture">
           <%= image_tag gym.picture.first.url  %>
         </div>
-        <% end %>
+
       </div>
     </div>
-  </div>
-</div>
