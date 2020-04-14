@@ -2,10 +2,13 @@ require 'rails_helper'
 
 RSpec.feature "Sessions", type: :feature do
 
-  #User.create!(email: 'aaaaasdfg@example.com', password: '123456',name:'あああああ')
 
   before do
     visit login_path
+  end
+
+  it 'ログイン画面が表示される' do
+    expect(page).to have_http_status(200)
   end
 
   it 'ログインする' do
@@ -14,9 +17,7 @@ RSpec.feature "Sessions", type: :feature do
     click_on 'ログインボタン'
     expect(page).to have_content 'ログアウト'
   end
-  it 'ログインしない' do
-    expect(page).to have_link 'アカウントを作成する'
-  end
+
 
 
 
