@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe Gym, type: :model do
 
-  it "名前、メール、パスワードがある場合有効である" do
+  it "name、content、picture、user_idがある場合有効である" do
     gym = Gym.create(
       name: "ゴールドジム",
       content: "good",
@@ -18,6 +18,7 @@ RSpec.describe Gym, type: :model do
       name: nil,
       content: "good",
       picture:"test"
+      user_id: "1"
     )
     expect(gym).to be_invalid
   end
@@ -27,6 +28,7 @@ RSpec.describe Gym, type: :model do
       name: "ゴールドジム",
       content: nil,
       picture:"test"
+      user_id: "1"
     )
     expect(gym).to be_invalid
   end
@@ -36,6 +38,7 @@ RSpec.describe Gym, type: :model do
       name: "ゴールドジム",
       content: "good",
       picture: nil
+      user_id: "1"
     )
   expect(gym).to be_invalid
   end
