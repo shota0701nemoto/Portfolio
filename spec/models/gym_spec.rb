@@ -4,12 +4,8 @@ require 'rails_helper'
 RSpec.describe Gym, type: :model do
 
   it "name、content、picture、user_idがある場合有効である" do
-    gym = Gym.create(
-      name: "ゴールドジム",
-      content: "good",
-      picture: "test.png",
-      user_id: "1"
-    )
+    gym = create(:gym)
+
     expect(gym).to be_valid
   end
 
@@ -43,4 +39,3 @@ RSpec.describe Gym, type: :model do
   expect(gym).to be_invalid
   end
 end
-
