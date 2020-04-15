@@ -1,18 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe GymsController,type: :controller do
+describe GymsController,type: :controller do
 
-  describe '#index' do
+let(:user) { create(:user) }
 
-    before do
-      @user = create(:user)
-    end
+  #before do
+    #@gyms = create(:gym)
+  #end
+
+  describe '#ログイン後' do
 
     it 'renders the :index template' do
-      sign_in @user
+
       get :index
       expect(response).to be_success
     end
   end
-  
+
 end

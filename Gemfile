@@ -55,6 +55,7 @@ group :test do
   gem 'guard',                    '2.15.0'
   gem 'guard-minitest',           '2.4.6'
   gem 'rspec-rails'
+
 end
 
 group :production do

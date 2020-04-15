@@ -1,10 +1,9 @@
 require 'rails_helper'
-#require File.expand_path('../config/environment', __dir__)
 
-RSpec.feature "Gyms", type: :feature do
+RSpec.feature "Comments", type: :feature do
 
 
- it "userがgymを投稿する" do
+ it "userがgymにcommentする" do
  # ユーザーを作成
  @user = User.create(
    name: "PortfolioTaro",
@@ -24,18 +23,17 @@ fill_in "session[password]", with: @user.password
 click_button "ログインボタン"
 
 #@userがgymを投稿する
+expect {
  # タスク作成ページへ遷移
  click_link "口コミ"
- click_link "投稿する"
+ click_on @gym.name
  # 名前、口コミ、写真を投稿する
- fill_in 'gym[name]', with: "Test Task"
- fill_in 'gym[content]', with: "This is Test"
- attach_file "gym_picture", "app/assets/images/test.png"
- click_button '登録する'
+ fill_in 'comment[content]', with: "Test Task"
+ click_button 'コメントする'
 
  # 作成成功のメッセージが表示されること
- #expect(page).to have_content '投稿ありがとうございます!'
-expect(page).to have_content '投稿ありがとうございます!'
+ expect(page).to have_content 'コメントが投稿されました'
+}.to change(@user.comments, :count).by(1)
 end
 
 it"ジム詳細ページから投稿詳細ページに飛ぶことができる "do
