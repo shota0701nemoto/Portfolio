@@ -17,7 +17,7 @@ RSpec.describe Gym, type: :model do
     gym = Gym.new(
       name: nil,
       content: "good",
-      picture:"test"
+      picture:"test",
       user_id: "1"
     )
     expect(gym).to be_invalid
@@ -27,7 +27,7 @@ RSpec.describe Gym, type: :model do
     gym = Gym.new(
       name: "ゴールドジム",
       content: nil,
-      picture:"test"
+      picture:"test",
       user_id: "1"
     )
     expect(gym).to be_invalid
@@ -37,9 +37,10 @@ RSpec.describe Gym, type: :model do
     gym = Gym.new(
       name: "ゴールドジム",
       content: "good",
-      picture: nil
+      picture: nil,
       user_id: "1"
     )
   expect(gym).to be_invalid
   end
 end
+
