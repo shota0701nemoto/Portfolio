@@ -13,7 +13,7 @@ RSpec.describe Gym, type: :model do
     gym = Gym.new(
       name: nil,
       content: "good",
-      picture:"test",
+      picture:"test.png",
       user_id: "1"
     )
     expect(gym).to be_invalid
