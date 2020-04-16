@@ -9,19 +9,19 @@ RSpec.describe Gym, type: :model do
   end
 
   it "nameがない場合、無効である" do
-    gym = create(:gym, name: nil)
+    gym = build(:gym, name: nil)
     gym.valid?
     expect(gym.errors[:name]).to include("を入力してください")
   end
 
   it "contentがない場合、無効である" do
-    gym = create(:gym, content: nil)
+    gym = build(:gym, content: nil)
     gym.valid?
     expect(gym.errors[:content]).to include("を入力してください")
   end
 
   it "pictureがない場合、無効である" do
-    gym = create(:gym, picture: nil)
+    gym = build(:gym, picture: nil)
     gym.valid?
     expect(gym.errors[:picture]).to include("を入力してください")
   end
