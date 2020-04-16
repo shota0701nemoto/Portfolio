@@ -16,7 +16,7 @@ RSpec.describe BlogsController, type: :controller do
       expect(response).to have_http_status "200"
     end
 
-    it "@blogsに@blogが含まれていること" do
+    it "@blogsに@blogが含まれている" do
       expect(assigns(:blogs)).to match_array([@blog])
     end
   end
@@ -38,7 +38,7 @@ RSpec.describe BlogsController, type: :controller do
       it 'ログインしていない場合は失敗する' do
         blog_params = attributes_for(:blog)
         post :create, params: {blog: blog_params }
-        expect(response).to have_http_status "200"
+        expect(response).to have_http_status "302"
       end
     end
   end
