@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.feature "Comments", type: :feature do
 
+ describe "Comments" do
+
   it "userがgymにcommentする" do
     @user = User.create(
       name: "PortfolioTaro",
@@ -23,7 +25,9 @@ RSpec.feature "Comments", type: :feature do
     }.to change(@gym.comments, :count).by(1)
   end
 
-  it"userがコメントを削除する "do
+
+
+  it"userが自分のコメントを削除する "do
     @user = create(:user,email: "test1@example.com",)
       visit root_path
       click_link "ログイン"
@@ -41,6 +45,12 @@ RSpec.feature "Comments", type: :feature do
     }.to change(Comment, :count).by(0)
   end
 
-
+ it "userが他のuserのコメントを削除できない" do
 
   end
+
+it "" do
+end
+
+end
+end
