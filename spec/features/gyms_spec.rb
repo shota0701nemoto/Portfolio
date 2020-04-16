@@ -38,9 +38,12 @@ click_button "ログインボタン"
 expect(page).to have_content '投稿ありがとうございます!'
 end
 
-it"ジム詳細ページから投稿詳細ページに飛ぶことができる "do
+it"投稿したgymを削除する"do
 
 end
 
+it"ジム詳細ページから投稿詳細ページに飛ぶことができる "do
+
+end
 
 end

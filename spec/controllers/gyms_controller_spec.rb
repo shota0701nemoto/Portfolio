@@ -54,18 +54,20 @@ RSpec.describe GymsController,type: :controller do
   describe "#destroy" do
     before do
 
-      @gym = create(:gym)
+      @gym = build(:gym, id:"500")
     end
+    context "ログインしている場合" do
+      it '302レスポンスを返す' do
+        delete :destroy, params: { id: @gym }
+        expect(response.status).to eq 302
+      end
 
-    it 'リクエストが成功すること' do
-      delete :destroy, params: { id: @gym }
-      expect(response.status).to eq 302
-    end
-
-    it 'gymが削除されること' do
-      expect do
-        delete :destroy, params: { id: @gym.id }
-      end.to change(Gym, :count).by(-1)
+      it 'gymが削除されること' do
+        gym_params = attributes_for(:gym)
+        expect do
+          delete :destroy, params: {gym: gym_params }
+        end .to change(Gym, :count).by(-1)
+      end
     end
   end
 end
