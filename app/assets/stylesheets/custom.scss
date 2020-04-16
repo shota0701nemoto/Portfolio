@@ -74,10 +74,35 @@ margin-right:50px;
   border-bottom: solid 4px gray;
   font-size:22px;
 }
+
+.recent_gym_post{
+  padding-bottom:10px;
+  border-bottom: solid 4px gray;
+  font-size:22px;
+}
+.related_gym_name{
+  float: right;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.sidebar_related_gymbox{
+   display: flex;
+
+}
+
+.related_gym_picture img {
+height:70px;
+width: 70px;
+margin-top: 15px;
+margin-left: -10px;
+}
+
 .sidebar_row{
   list-style: none;
   margin-left: 10px;
 }
+
 .gym_sidebar_title {
   font-size:17px;
 }

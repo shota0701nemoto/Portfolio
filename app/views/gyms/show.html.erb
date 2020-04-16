@@ -13,11 +13,13 @@
           <% end %>
         </div>
       </li>
+      <h4 class ="recent_gym_post">投稿</h4>
+      <ul class="gym-posts">
       <li class="sidebar_row">
         <% @related_gyms.each do |related_gym| %>
         <div class="sidebar_related_gymbox">
-          <%= link_to (related_gym.name),gym_path(related_gym) %>
-          <%= image_tag(related_gym.picture.first.url) %>
+          <div class ="related_gym_picture"><%= image_tag(related_gym.picture.first.url) %></div>
+          <div class ="related_gym_name"><%= link_to (related_gym.name),gym_path(related_gym) %></div>
         </div>
         <% end %>
       </li>
@@ -26,7 +28,6 @@
 </div>
 <div class="show-gymbox">
   <h2 class ="gym_name"><%= @gym.name %></h2>
-
   <div class="gym_picture">
     <div class="row">
       <% if @gym.picture[0].present? %>

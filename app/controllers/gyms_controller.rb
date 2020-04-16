@@ -4,7 +4,6 @@ class GymsController < ApplicationController
 
   MAX_DISPLAY_RELATED_PRODUCTS = 4
 
-
   def index
        #debugger
     @gyms = Gym.paginate(page: params[:page], per_page: 18)
