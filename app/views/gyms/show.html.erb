@@ -16,7 +16,7 @@
       <li class="sidebar_row">
         <% @related_gyms.each do |related_gym| %>
         <div class="sidebar_related_gymbox">
-          <%= related_gym.name %>
+          <%= link_to (related_gym.name),gym_path(related_gym) %>
           <%= image_tag(related_gym.picture.first.url) %>
         </div>
         <% end %>
