@@ -14,7 +14,9 @@
   </div>
 <% end %>
 </div>
+<% if logged_in? %>
 <button type="button" class="btn btn-success"><%= link_to '投稿する', new_blog_path %></button>
 </div>
+<% end %>
 
 <%= will_paginate @blogs, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
