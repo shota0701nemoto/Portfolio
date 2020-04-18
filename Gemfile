@@ -31,6 +31,7 @@ gem 'paperclip'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem "gretel"
 gem 'devise'
+gem 'dotenv-rails'
 
 
 

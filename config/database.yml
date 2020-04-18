@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   host: db
   username: app_user_role
-  password: aaaa
+  password: <%= ENV['POSTGRESQL_KEY'] %>
   pool: 5
 
 development:
