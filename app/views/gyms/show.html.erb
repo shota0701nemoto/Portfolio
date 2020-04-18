@@ -45,8 +45,9 @@
     </div>
   </div>
   <h4 class ="ctitle"> <%= @gym.content %></h4>
+  <% if current_user?(@gym.user) %>
   <button type="button" class="btn btn-success">
-    <% if current_user?(@gym.user) %>
+    
     <%= link_to "削除", @gym, method: :delete,
     data: { confirm: "削除しますか？" } %>
     <% end %>
