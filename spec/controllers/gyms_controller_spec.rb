@@ -53,7 +53,6 @@ RSpec.describe GymsController,type: :controller do
 
   describe "#destroy" do
     before do
-
       @gym = build(:gym, id:"500")
     end
     context "ログインしている場合" do
