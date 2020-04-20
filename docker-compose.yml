@@ -1,22 +1,27 @@
 version: '3'
 services:
   db:
-    image: postgres
+    image: mysql:8.0
     environment:
-      POSTGRES_PASSWORD: secret
+      MYSQL_DATABASE: root
+      MYSQL_ROOT_PASSWORD: password
+    ports:
+      - '3306:3306'
+    command: --default-authentication-plugin=mysql_native_password
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - mysql-data:/var/lib/mysql
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/portfolio
+      - .:/myapp
     ports:
       - "3000:3000"
     depends_on:
       - db
-      - chrome
-  chrome:
-    image: selenium/standalone-chrome:3.141.59-dubnium
-    ports:
-      - 4444:4444
+    stdin_open: true
+    tty: true
+    command: bundle exec rails server -b 0.0.0.0
+volumes:
+  mysql-data:
+    driver: local
