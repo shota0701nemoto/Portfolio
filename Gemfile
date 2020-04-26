@@ -15,9 +15,12 @@ gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.4', require: false
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem 'mysql2'
+gem 'dotenv-rails'
+gem 'pg'
 
 group :development, :test do
-  gem 'sqlite3', '1.4.1'
+
   gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -39,8 +42,13 @@ group :test do
   gem 'guard-minitest',           '2.4.6'
 end
 
+group :production, :staging do
+  gem 'unicorn'
+end
+
 group :production do
-  gem 'pg', '1.1.4'
+  gem 'unicorn'
+
 end
 
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
