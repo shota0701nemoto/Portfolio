@@ -60,13 +60,6 @@ RSpec.describe GymsController,type: :controller do
         delete :destroy, params: { id: @gym }
         expect(response.status).to eq 302
       end
-
-      it 'gymが削除されること' do
-        gym_params = attributes_for(:gym)
-        expect do
-          delete :destroy, params: {gym: gym_params }
-        end .to change(Gym, :count).by(-1)
-      end
     end
   end
 end

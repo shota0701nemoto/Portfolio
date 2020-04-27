@@ -1,10 +1,10 @@
     default: &default
-      adapter: mysql2
-      encoding: utf8mb4
-      pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-      username: <%= ENV.fetch("MYSQL_USERNAME", "root") %>
-      password: <%= ENV.fetch("MYSQL_PASSWORD", "password") %>
-      host: <%= ENV.fetch("MYSQL_HOST", "db") %>
+      adapter: postgresql
+      encoding: unicode
+      host: localhost
+      username: sahota0701nemoto  #記事内で後々出てきます。
+      password: aaaa           #記事内で後々出てきます。
+      pool: 5
 
     development:
       <<: *default
@@ -13,9 +13,10 @@
     test:
       <<: *default
       database: myapp_test
-
+      
     production:
       <<: *default
-      database: myapp_production
-      username: myapp
-      password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+      host: portfolio.crtlvydt6zsr.ap-northeast-1.rds.amazonaws.com
+      database: portfolio
+      username: root
+      password: Shota033

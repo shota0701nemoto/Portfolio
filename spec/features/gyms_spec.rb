@@ -38,8 +38,20 @@ click_button "ログインボタン"
 expect(page).to have_content '投稿ありがとうございます!'
 end
 
-it"投稿したgymを削除する"do
-
+it"自ら投稿したgymを削除する"do
+  @user = create(:user,email: "test1@example.com",)
+  visit root_path
+  click_link "ログイン"
+  fill_in "session[email]", with: @user.email
+  fill_in "session[password]", with: @user.password
+  click_button "ログインボタン"
+  @gym = create(:gym)
+  click_link "口コミ"
+  click_on @gym.name
+  click_on "削除"
+  expect{
+    expect(page).to have_content "コメントを削除しました"
+  }.to change(Comment, :count).by(0)
 end
 
 it"ジム詳細ページから投稿詳細ページに飛ぶことができる "do
