@@ -57,18 +57,18 @@ RSpec.feature "Comments", type: :feature do
     end
   end
 
-  it "userがuser2の投稿にコメントする" do
+  it "userがother_userの投稿にコメントする" do
       @user = create(:user,email: "test2@example.com",)
       @other_user = create(:user,email: "test1@example.com",)
-      @gym = create(:gym,user:@other_user,name:"aaaa",content:"aaaaa",)
+      @gym = create(:gym,user:@other_user,)
       visit root_path
       click_link "ログイン"
-      fill_in "session[email]", with: "test2@example.com"
+      fill_in "session[email]", with: @user.email
       fill_in "session[password]", with: @user.password
       click_link "口コミ"
       click_link @gym.name
-      #fill_in 'comment_content', with: "Test Task"
-      #click_button 'コメントする'
+      fill_in 'comment_content', with: "Test Task"
+      click_button 'コメントする'
       expect(page).to have_content @gym.name
   end
 end
