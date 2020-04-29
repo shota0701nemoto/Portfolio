@@ -1,0 +1,10 @@
+<footer>
+	<div id="button"></div>
+	<div id="container">
+		<div class="link">
+      <li><%= link_to "ホーム", root_path %></li>
+      <li><%= link_to "お問い合わせ", help_path %></li>
+		</div>
+	</div>
+</footer>
+<%= debug(params) if Rails.env.development? %>
