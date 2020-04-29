@@ -33,6 +33,7 @@ gem "gretel"
 gem 'devise'
 gem 'dotenv-rails'
 gem 'pg'
+gem 'rack-attack'
 
 
 
