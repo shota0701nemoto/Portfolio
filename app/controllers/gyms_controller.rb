@@ -1,7 +1,6 @@
 class GymsController < ApplicationController
   before_action :logged_in_user, only: [:show, :create, :destroy]
   before_action :correct_user,   only: :destroy
-
   MAX_DISPLAY_RELATED_PRODUCTS = 4
 
   def index
@@ -20,6 +19,7 @@ class GymsController < ApplicationController
     @comments = @gym.comments.paginate(page: params[:page], per_page: 10)
     @blogs = Blog.all
     @related_gyms = Gym.includes(:comments,:pictures).sample(MAX_DISPLAY_RELATED_PRODUCTS)
+    @like = Like.new
   end
 
   #ログインしたユーザーがジムを投稿する
