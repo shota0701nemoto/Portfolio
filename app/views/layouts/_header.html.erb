@@ -2,8 +2,9 @@
   <div class="container">
     <div class="navbar-header">
     </div>
-    <div id="navbar" class="collapse navbar-collapse">
+    <div id="navbar" class="collapse navbar-collapse navbar-right">
       <ul class="nav navbar-nav">
+        <li class="active"><%= link_to "ホーム", root_path %></li>
         <li class="active"><%= link_to "コラム", blogs_path %></li>
         <li class="active"><%= link_to "口コミ", gyms_path %></li>
         <% if logged_in? %>
@@ -15,5 +16,6 @@
         <% else %>
         <li class="active"><%= link_to "ログイン", login_path %></li>
         <% end %>
+        <li class="active"><%= link_to "お問い合わせ", help_path %></li>
       </ul>
     </nav>

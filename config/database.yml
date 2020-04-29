@@ -16,7 +16,4 @@
       
     production:
       <<: *default
-      host: portfolio.crtlvydt6zsr.ap-northeast-1.rds.amazonaws.com
       database: portfolio
-      username: root
-      password: Shota033
