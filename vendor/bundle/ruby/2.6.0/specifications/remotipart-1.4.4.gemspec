@@ -14,31 +14,23 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["LICENSE".freeze, "README.rdoc".freeze]
   s.files = ["LICENSE".freeze, "README.rdoc".freeze]
   s.homepage = "http://opensource.alfajango.com/remotipart/".freeze
-  s.rubygems_version = "3.0.3".freeze
+  s.rubygems_version = "3.1.2".freeze
   s.summary = "Remotipart is a Ruby on Rails gem enabling remote multipart forms (AJAX style file uploads) with jquery-rails.".freeze
 
-  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
+  end
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rake>.freeze, [">= 0"])
-      s.add_development_dependency(%q<jeweler>.freeze, [">= 0"])
-      s.add_development_dependency(%q<appraisal>.freeze, [">= 0"])
-      s.add_development_dependency(%q<jquery-rails>.freeze, [">= 0"])
-      s.add_development_dependency(%q<sqlite3>.freeze, [">= 0"])
-      s.add_development_dependency(%q<paperclip>.freeze, [">= 0"])
-      s.add_development_dependency(%q<remotipart>.freeze, [">= 0"])
-    else
-      s.add_dependency(%q<rake>.freeze, [">= 0"])
-      s.add_dependency(%q<jeweler>.freeze, [">= 0"])
-      s.add_dependency(%q<appraisal>.freeze, [">= 0"])
-      s.add_dependency(%q<jquery-rails>.freeze, [">= 0"])
-      s.add_dependency(%q<sqlite3>.freeze, [">= 0"])
-      s.add_dependency(%q<paperclip>.freeze, [">= 0"])
-      s.add_dependency(%q<remotipart>.freeze, [">= 0"])
-    end
+  if s.respond_to? :add_runtime_dependency then
+    s.add_development_dependency(%q<rake>.freeze, [">= 0"])
+    s.add_development_dependency(%q<jeweler>.freeze, [">= 0"])
+    s.add_development_dependency(%q<appraisal>.freeze, [">= 0"])
+    s.add_development_dependency(%q<jquery-rails>.freeze, [">= 0"])
+    s.add_development_dependency(%q<sqlite3>.freeze, [">= 0"])
+    s.add_development_dependency(%q<paperclip>.freeze, [">= 0"])
+    s.add_development_dependency(%q<remotipart>.freeze, [">= 0"])
   else
     s.add_dependency(%q<rake>.freeze, [">= 0"])
     s.add_dependency(%q<jeweler>.freeze, [">= 0"])

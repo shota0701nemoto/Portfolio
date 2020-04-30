@@ -16,37 +16,26 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/rspec/rspec-rails".freeze
   s.licenses = ["MIT".freeze]
   s.rdoc_options = ["--charset=UTF-8".freeze]
-  s.rubygems_version = "3.0.3".freeze
+  s.rubygems_version = "3.1.2".freeze
   s.summary = "RSpec for Rails".freeze
 
-  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
+  end
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<actionpack>.freeze, [">= 4.2"])
-      s.add_runtime_dependency(%q<activesupport>.freeze, [">= 4.2"])
-      s.add_runtime_dependency(%q<railties>.freeze, [">= 4.2"])
-      s.add_runtime_dependency(%q<rspec-core>.freeze, ["~> 3.9"])
-      s.add_runtime_dependency(%q<rspec-expectations>.freeze, ["~> 3.9"])
-      s.add_runtime_dependency(%q<rspec-mocks>.freeze, ["~> 3.9"])
-      s.add_runtime_dependency(%q<rspec-support>.freeze, ["~> 3.9"])
-      s.add_development_dependency(%q<ammeter>.freeze, ["~> 1.1.2"])
-      s.add_development_dependency(%q<aruba>.freeze, ["~> 0.14.12"])
-      s.add_development_dependency(%q<cucumber>.freeze, ["~> 1.3.5"])
-    else
-      s.add_dependency(%q<actionpack>.freeze, [">= 4.2"])
-      s.add_dependency(%q<activesupport>.freeze, [">= 4.2"])
-      s.add_dependency(%q<railties>.freeze, [">= 4.2"])
-      s.add_dependency(%q<rspec-core>.freeze, ["~> 3.9"])
-      s.add_dependency(%q<rspec-expectations>.freeze, ["~> 3.9"])
-      s.add_dependency(%q<rspec-mocks>.freeze, ["~> 3.9"])
-      s.add_dependency(%q<rspec-support>.freeze, ["~> 3.9"])
-      s.add_dependency(%q<ammeter>.freeze, ["~> 1.1.2"])
-      s.add_dependency(%q<aruba>.freeze, ["~> 0.14.12"])
-      s.add_dependency(%q<cucumber>.freeze, ["~> 1.3.5"])
-    end
+  if s.respond_to? :add_runtime_dependency then
+    s.add_runtime_dependency(%q<actionpack>.freeze, [">= 4.2"])
+    s.add_runtime_dependency(%q<activesupport>.freeze, [">= 4.2"])
+    s.add_runtime_dependency(%q<railties>.freeze, [">= 4.2"])
+    s.add_runtime_dependency(%q<rspec-core>.freeze, ["~> 3.9"])
+    s.add_runtime_dependency(%q<rspec-expectations>.freeze, ["~> 3.9"])
+    s.add_runtime_dependency(%q<rspec-mocks>.freeze, ["~> 3.9"])
+    s.add_runtime_dependency(%q<rspec-support>.freeze, ["~> 3.9"])
+    s.add_development_dependency(%q<ammeter>.freeze, ["~> 1.1.2"])
+    s.add_development_dependency(%q<aruba>.freeze, ["~> 0.14.12"])
+    s.add_development_dependency(%q<cucumber>.freeze, ["~> 1.3.5"])
   else
     s.add_dependency(%q<actionpack>.freeze, [">= 4.2"])
     s.add_dependency(%q<activesupport>.freeze, [">= 4.2"])

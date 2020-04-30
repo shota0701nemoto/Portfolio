@@ -13,35 +13,25 @@ Gem::Specification.new do |s|
   s.email = "kjvarga@gmail.com".freeze
   s.homepage = "http://github.com/kjvarga/sitemap_generator".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.0.3".freeze
+  s.rubygems_version = "3.1.2".freeze
   s.summary = "Easily generate XML Sitemaps".freeze
 
-  s.installed_by_version = "3.0.3" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.2" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
+  end
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<builder>.freeze, ["~> 3.0"])
-      s.add_development_dependency(%q<fog-aws>.freeze, [">= 0"])
-      s.add_development_dependency(%q<nokogiri>.freeze, [">= 0"])
-      s.add_development_dependency(%q<rspec>.freeze, [">= 0"])
-      s.add_development_dependency(%q<webmock>.freeze, [">= 0"])
-      s.add_development_dependency(%q<rake>.freeze, [">= 0"])
-      s.add_development_dependency(%q<aws-sdk-core>.freeze, [">= 0"])
-      s.add_development_dependency(%q<aws-sdk-s3>.freeze, [">= 0"])
-      s.add_development_dependency(%q<google-cloud-storage>.freeze, [">= 0"])
-    else
-      s.add_dependency(%q<builder>.freeze, ["~> 3.0"])
-      s.add_dependency(%q<fog-aws>.freeze, [">= 0"])
-      s.add_dependency(%q<nokogiri>.freeze, [">= 0"])
-      s.add_dependency(%q<rspec>.freeze, [">= 0"])
-      s.add_dependency(%q<webmock>.freeze, [">= 0"])
-      s.add_dependency(%q<rake>.freeze, [">= 0"])
-      s.add_dependency(%q<aws-sdk-core>.freeze, [">= 0"])
-      s.add_dependency(%q<aws-sdk-s3>.freeze, [">= 0"])
-      s.add_dependency(%q<google-cloud-storage>.freeze, [">= 0"])
-    end
+  if s.respond_to? :add_runtime_dependency then
+    s.add_runtime_dependency(%q<builder>.freeze, ["~> 3.0"])
+    s.add_development_dependency(%q<fog-aws>.freeze, [">= 0"])
+    s.add_development_dependency(%q<nokogiri>.freeze, [">= 0"])
+    s.add_development_dependency(%q<rspec>.freeze, [">= 0"])
+    s.add_development_dependency(%q<webmock>.freeze, [">= 0"])
+    s.add_development_dependency(%q<rake>.freeze, [">= 0"])
+    s.add_development_dependency(%q<aws-sdk-core>.freeze, [">= 0"])
+    s.add_development_dependency(%q<aws-sdk-s3>.freeze, [">= 0"])
+    s.add_development_dependency(%q<google-cloud-storage>.freeze, [">= 0"])
   else
     s.add_dependency(%q<builder>.freeze, ["~> 3.0"])
     s.add_dependency(%q<fog-aws>.freeze, [">= 0"])
