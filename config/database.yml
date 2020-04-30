@@ -8,11 +8,11 @@
 
     development:
       <<: *default
-      database: myapp_development
+      database: portfolio_development
 
     test:
       <<: *default
-      database: myapp_test
+      database: portfolio_test
       
     production:
       <<: *default

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'contacts/new'
+  get 'contacts/create'
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
