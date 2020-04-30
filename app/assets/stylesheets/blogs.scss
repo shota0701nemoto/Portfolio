@@ -1,0 +1,74 @@
+.blogbox {
+  height: 120px;
+  width: 110%;
+  text-align: center;
+  background: #fff;
+  padding : 25px;
+  box-shadow: 0 2px 5px #ccc;
+  margin : 10px;
+}
+
+.blogtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.blogbody{
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.container{
+
+ width: 100px;
+}
+.btn btn-success{
+  font-size: 20px;
+}
+
+.title{
+  margin-top:35px;
+  margin-left:-150px;
+}
+
+.show-blogbox{
+  margin-left:70px;
+
+  margin-top:90px;
+  margin-bottom:300px;
+font-size:20px;
+  width:700px;
+  line-height: 30px;
+}
+
+.sidebar {
+  position:absolute;
+  width:250px;
+  margin-top:70px;
+  margin-left:900px;
+}
+
+//newアクション//
+.blog_form{
+  margin-top:70px;
+}
+
+//_form.html.erb//
+.title_field{
+margin-bottom:70px;
+width:300px;
+font-size:30px;
+}
+
+.body_field{
+margin-bottom:70px;
+width:1140px;
+font-size:auto;
+height:600px;
+}
+
+.actions{
+  font-size:20px;
+}

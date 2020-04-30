@@ -1,0 +1,7 @@
+<% breadcrumb :new_blog, @blog %>
+
+<div class ="blog_form"><%= render 'form', blog: @blog %></div>
+
+<button type="button" class="btn btn-success">
+<%= link_to '戻る', blogs_path %>
+</button>

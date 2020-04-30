@@ -1,0 +1,6 @@
+    <%= form_for(@comment) do |f| %>
+        <%= hidden_field_tag :gym_id, @gym.id %>
+        <%= f.text_field :content, placeholder: "Comment..." %>
+
+        <%= f.submit "コメントする", class: "btn btn-primary btn-sm" %>
+    <% end %>

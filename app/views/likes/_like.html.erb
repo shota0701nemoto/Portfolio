@@ -1,0 +1,8 @@
+<div class="like_button_on">
+    <%= link_to "いいねを削除", likes_delete_path(gym_id: @gym.id), {method: "post", remote: true} %>
+    <%= @like_count %>
+</div>
+<div class="like_button">
+    <%= link_to "いいね", likes_create_path(gym_id: @gym.id), {method: "post", remote: true} %>
+    <%= @like_count %>
+</div>

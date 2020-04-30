@@ -1,0 +1,10 @@
+    <div class="col-lg-2">
+      <div class="gymbox">
+        <div class="gymtitle">
+          <%= link_to (gym.name), gym_path(gym) %>
+        </div>
+        <div class="gympicture">
+          <%= image_tag gym.picture.first.url  %>
+        </div>
+      </div>
+    </div>

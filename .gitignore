@@ -33,3 +33,15 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore sitemap file
+public/sitemap.xml.gz
+
+# Ignore env
+/.env
+
+# Ignore Docker-cmpose.yml
+/docker-cmpose.yml
+
+# Ignore config/database.yml
+config/database.yml

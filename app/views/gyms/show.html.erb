@@ -1,0 +1,87 @@
+<% set_meta_tags title: @gym.name %>
+<% breadcrumb :gym, @gym %>
+
+<div class="sidebar">
+  <div class="sidebar__item">
+    <h4 class ="recent_post">人気記事</h4>
+    <ul class="popular-posts">
+      <li class="sidebar_row">
+        <% @blogs.each do |blog| %>
+        <div class="sidebar_blogbox">
+          <div class="gym_sidebar_title clearfix">
+            <%= link_to (blog.title), blog_path(blog) %>
+          </div>
+          <% end %>
+        </div>
+      </li>
+      <h4 class ="recent_gym_post">投稿</h4>
+      <ul class="gym-posts">
+        <li class="sidebar_row">
+          <% @related_gyms.each do |related_gym| %>
+          <div class="sidebar_related_gymbox">
+            <div class ="related_gym_picture"><%= image_tag(related_gym.picture.first.url) %></div>
+            <div class ="related_gym_name"><%= link_to (related_gym.name),gym_path(related_gym) %></div>
+          </div>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="show-gymbox">
+    <h2 class ="gym_name"><%= @gym.name %></h2>
+    <div class="gym_picture">
+      <div class="row">
+        <% if @gym.picture[0].present? %>
+        <div class="col-6">
+          <%= image_tag "#{@gym.picture[0].url}" %>
+          <% end %>
+        </div>
+        <% if @gym.picture[0].present? %>
+        <div class="col-4">
+          <% @gym.picture.each_with_index do |picture,index| %>
+          <%= image_tag "#{@gym.picture[index].url}" %>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <h4 class ="ctitle"> <%= @gym.content %></h4>
+    <% if current_user?(@gym.user) %>
+    <button type="button" class="btn btn-success">
+      <%= link_to "削除", @gym, method: :delete,data: { confirm: "削除しますか？" } %>
+      <% end %>
+    </button>
+    <button type="button" class="btn btn-success">
+      <%= link_to '戻る', gyms_path %>
+    </button>
+
+    <div class ="gym-like">
+      <a class ="gym-like-a">いいね:<%= @gym.likes.count %></a>
+      <% if current_user.already_liked?(@gym) %>
+      <div class ="gym-like-button">
+        <a><%= button_to '取り消す', gym_like_path(@gym), method: :delete %></a>
+      </div>
+      <% else %>
+      <div class ="gym-like-button">
+        <a><%= button_to 'いいね', gym_likes_path(@gym) %></a>
+      </div>
+      <% end %>
+    </div>
+
+    <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
+    <p>
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        コメントを表示
+      </button>
+    </p>
+  </div>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <div class="comment">
+        <% if @comments.any? %>
+        <%= render @comments %>
+        <%= will_paginate @comments %>
+        <% end %>
+      </div>
+    </div>
+  </div>

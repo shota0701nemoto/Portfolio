@@ -1,19 +1,21 @@
     default: &default
       adapter: postgresql
       encoding: unicode
-      host: portfolio.crtlvydt6zsr.ap-northeast-1.rds.amazonaws.com
-      username: root  
-      password: Shota033           
+      # ご自身のpostgresqlに登録してあるユーザ名にしてください。
+      username: <%= ENV.fetch('POSTGRES_USER', 'sahota0701nemoto') %>
+      password: <%= ENV.fetch('POSTGRES_PASSWORD', 'aaaa') %>      # docker-composeのPOSTGRES_PASSWORDと揃える。
       pool: 5
+      host: <%= ENV.fetch('DATABASE_HOST', 'localhost') %> # docker-composeのサービス名にします。
+      port: <%= ENV.fetch('DATABASE_PORT') { 5432 } %>
 
     development:
       <<: *default
-      database: porfolio_development
+      database: myapp_development
 
     test:
       <<: *default
-      database: portfolio_test
-
+      database: myapp_test
+      
     production:
       <<: *default
       database: portfolio

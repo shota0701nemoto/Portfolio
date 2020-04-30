@@ -1,0 +1,22 @@
+<h1><%= @title %></h1>
+<% breadcrumb :blogs %>
+<div class="container">
+<div class="row">
+<% @blogs.each do |blog| %>
+<div class="col-lg-2">
+  <div class="blogbox">
+    <div class="blogtitle clearfix">
+      <%= link_to (blog.title), blog_path(blog) %>
+    </div>
+    <div class="productCaption clearfix">
+    </div>
+  </div>
+  </div>
+<% end %>
+</div>
+<% if logged_in? %>
+<button type="button" class="btn btn-success"><%= link_to '投稿する', new_blog_path %></button>
+</div>
+<% end %>
+
+<%= will_paginate @blogs, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

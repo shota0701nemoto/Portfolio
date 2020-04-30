@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="772a6aea-4f8a-4320-831c-3c00a4336c20" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/likes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/likes_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/likes_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/like.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/likes/_like.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/likes/create.js.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/likes/delete.js.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/users/confirm.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/initializers/rack_attack.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20200429035449_create_likes.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/danbel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1168/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1169/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1170/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1171/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1172/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1173/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1174/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1175/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1176/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1177/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1178/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1179/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1180/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1181/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1182/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/gym/picture/1183/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1587996866-34316-0005-6757/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1587996873-34316-0018-4648/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1587996873-34316-0019-4373/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142658-54380-0005-6940/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142667-54380-0019-6406/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142667-54380-0020-1050/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142739-54474-0005-8977/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142746-54474-0019-5737/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142746-54474-0020-9757/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142850-54546-0005-5319/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142857-54546-0019-2773/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142857-54546-0020-0453/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142890-54617-0005-4658/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142897-54617-0019-8394/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/tmp/1588142897-54617-0020-7060/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/factories/likes.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/features/likes_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/models/like_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spec/requests/likes_request_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/cache/rack-attack-6.3.0.gem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/Rakefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/bin/setup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/allow2ban.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/blocklist.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/cache.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/check.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/configuration.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/fail2ban.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/path_normalizer.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/railtie.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/request.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/safelist.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/store_proxy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/store_proxy/active_support_redis_store_proxy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/store_proxy/dalli_proxy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/store_proxy/mem_cache_store_proxy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/store_proxy/redis_cache_store_proxy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/store_proxy/redis_proxy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/store_proxy/redis_store_proxy.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/throttle.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/track.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/lib/rack/attack/version.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/allow2ban_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/blocking_ip_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/blocking_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/blocking_subnet_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/cache_store_config_for_allow2ban_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/cache_store_config_for_fail2ban_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/cache_store_config_for_throttle_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/cache_store_config_with_rails_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/customizing_blocked_response_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/customizing_throttled_response_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/extending_request_object_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/fail2ban_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/rails_middleware_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/safelisting_ip_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/safelisting_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/safelisting_subnet_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/active_support_dalli_store_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/active_support_mem_cache_store_pooled_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/active_support_mem_cache_store_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/active_support_memory_store_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/active_support_redis_cache_store_pooled_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/active_support_redis_cache_store_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/active_support_redis_store_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/connection_pool_dalli_client_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/dalli_client_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/redis_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/stores/redis_store_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/throttling_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/track_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/acceptance/track_throttle_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/allow2ban_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/fail2ban_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/integration/offline_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/rack_attack_dalli_proxy_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/rack_attack_instrumentation_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/rack_attack_path_normalizer_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/rack_attack_request_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/rack_attack_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/rack_attack_throttle_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/rack_attack_track_spec.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/spec_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/gems/rack-attack-6.3.0/spec/support/cache_store_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/specifications/rack-attack-6.3.0.gemspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/gyms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/gyms.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/static_pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/static_pages.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/gyms_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/gyms_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/gym.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/gym.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/blogs/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/blogs/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/blogs/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/blogs/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/gyms/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gyms/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200316144757_create_gyms.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200311133757_create_gyms.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/factories/gyms.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/factories/gyms.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spec/features/comments_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/features/comments_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/bundler/gems/bootstrap-rubygem-ef343b781ca1" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bundle/ruby/2.6.0/bundler/gems/bootstrap-rubygem-ef343b781ca1" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bFINNzuZC4CCYqBQw5aLT09B9M" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Rails.Development: Portfolio">
+    <configuration name="Development: Portfolio" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="Portfolio" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Production: Portfolio" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="Portfolio" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: Portfolio" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="Portfolio" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_VERBOSE" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: Portfolio" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="Portfolio" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_VERBOSE" VALUE="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="772a6aea-4f8a-4320-831c-3c00a4336c20" name="Default Changelist" comment="" />
+      <created>1588221373428</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588221373428</updated>
+      <workItem from="1588221374640" duration="6582000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

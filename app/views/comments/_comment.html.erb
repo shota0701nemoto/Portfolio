@@ -1,0 +1,11 @@
+<div class="list-group">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><%= comment.content %></h5>
+        <small><%= time_ago_in_words(comment.created_at) %></small>
+        <small><% if current_user?(comment.user) %>
+            <%= link_to "削除", comment, method: :delete,
+                                          data: { confirm: "本当に削除しますか?" } %>
+          <% end %>
+        </small>
+      </div>
+  </div>

@@ -1,0 +1,10 @@
+ja:
+activerecord:
+  models:
+    user: ユーザー
+  attributes:
+    user:
+      email: メールアドレス
+      password: パスワード
+      activated: アクティブプラグ
+      admin: 管理者プラグ

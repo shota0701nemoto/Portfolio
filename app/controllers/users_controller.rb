@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @posts = @user.posts.paginate(page: params[:page])
   end
 
   def new
@@ -19,9 +20,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "ログイン成功です"
       redirect_to @user
     else
+    flash.now[:danger] = '正しく入力してください'
       render 'new'
     end
   end
@@ -33,7 +35,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "情報を更新しました"
       redirect_to @user
     else
       render 'edit'
@@ -55,14 +57,6 @@ class UsersController < ApplicationController
 
     # beforeアクション
 
-    # ログイン済みユーザーかどうか確認
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = "Please log in."
-        redirect_to login_url
-      end
-    end
 
     # 正しいユーザーかどうか確認
     def correct_user

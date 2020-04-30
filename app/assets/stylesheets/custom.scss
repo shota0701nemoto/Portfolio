@@ -1,205 +1,206 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* mixins, variables, etc. */
-
-$gray-medium-light: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing:    border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing:         border-box;
-}
-
-/* universal */
 
 body {
   padding-top: 60px;
+
 }
 
-section {
-  overflow: auto;
+h1{
+  text-align:center;
 }
 
-textarea {
-  resize: vertical;
+//gym showアクション//
+ .gym_name {
+   width :auto;
+   max-width: 800px;
+	margin-left: -10px;
+  box-shadow: 0 0 5px #ccc;
+  border-top: solid 4px gray;
+  font-size:50px;
+  padding: 20px;
 }
 
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
-}
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
+.show-gymbox{
+  padding-left: 90px;
+  max-width: 800px;
 }
 
 
-/* header */
+.col-6{
+  position:relative;
+  zoom: 1.7;
+  margin:auto;
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
+  margin-bottom:25px;
+  margin-top:25px;
 }
 
-/* footer */
+.col-4{
+position:relative;
+
+margin-right:50px;
+}
+
+.ctitle {
+	font-weight: 700;
+	margin-bottom: 30px;
+  margin-top: 45px;
+  width:700px;
+  margin-left: -20px;
+}
+
+.container-fluid{
+ display: inline-block;
+ max-width: 10px;
+ margin-top: 45px;
+ box-shadow: 0 0 5px #ccc;
+}
+
+.sidebar {
+  position:absolute;
+  width:300px;
+  margin-top:-20px;
+  margin-left:900px;
+}
+
+.sidebar__item {
+  margin-bottom: 20px;
+}
+
+.recent_post{
+  padding-bottom:10px;
+  border-bottom: solid 4px gray;
+  font-size:22px;
+}
+
+.recent_gym_post{
+  margin-top: 80px;
+  padding-bottom:10px;
+  border-bottom: solid 4px gray;
+  font-size:22px;
+}
+.related_gym_name{
+  float: right;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+.sidebar_related_gymbox{
+   display: flex;
+
+}
+
+.related_gym_picture img {
+height:70px;
+width: 70px;
+margin-top: 15px;
+margin-left: -10px;
+}
+
+.sidebar_row{
+  list-style: none;
+  margin-left: 10px;
+}
+
+.gym_sidebar_title {
+  font-size:17px;
+  margin-left: -12px;
+}
+
+/* Footer */
+*, *:before, *:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.contents {
+	min-height: 100vh;
+	margin: auto;
+	padding: 1em 0 10em 0;
+	background: rgb(236, 240, 241);
+}
+footer #button {
+	position: relative;
+	width: 10em;
+	height: 2em;
+	margin: 0 auto;
+	padding: 0.2em;
+	cursor: pointer;
+	-webkit-transition: all 1s ease;
+	        transition: all 1s ease;
+	text-align: center;
+	color: #00acc1;
+	border-radius: 3px 3px 0px 0px;
+	background: #C0C0C0;
+}
+footer #button:hover {
+	position: relative;
+	width: 10em;
+	height: 2em;
+	-webkit-transition: all 1s ease;
+	        transition: all 1s ease;
+}
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 1.5em;
+	margin: 0 auto;
+	 -webkit-transition: all 1s ease;
+	        transition: all 1s ease;
+
+}
+footer:hover {
+	height: 10em;
+	-webkit-transition: all 1s ease;
+	        transition: all 1s ease;
+}
+footer #container {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #C0C0C0;
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
+footer .link  {
+text-align: center;
+ list-style: none;
+	-webkit-transition: all, 0.3s;
+	        transition: all, 0.3s;
+          padding-top:30px;
+          line-height:-10px;
 }
 
-/* sidebar */
+.breadcrumbs {
+  padding-left:380px;
+  padding-top:40px;
+  padding-bottom:20px;
+  font-size:15px;
 
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
+//_post_form.html.erb//
+.gym_name_form{
+  width:500px;
 }
 
-.gravatar_edit {
-  margin-top: 15px;
+.gym_content_form{
+  width:900px;
 }
 
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 15px;
-  @include box_sizing;
+.gym_picture_form{
+padding-top:10px;
+padding-bottom:20px;
 }
 
-input {
-  height: auto !important;
-}
-
-#error_explanation {
-  color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
-}
-
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
-  }
-}
-
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
-}
-
-/* Users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
+//sessionsコントローラ・newアクション//
+.signup{
+  padding-top:15px;
 }

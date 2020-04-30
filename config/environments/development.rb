@@ -2,6 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
+  config.web_console.whitelisted_ips = '0.0.0.0/0'
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
@@ -14,8 +15,8 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join('tmp', 'caching-dev.txt').exist?
-    config.action_controller.perform_caching = true
+  if Rails.root.join('tmp', 'caching-dev.txt').exist? #caching-dev.txtの有無を判定
+    config.action_controller.perform_caching = true   #キャッシュを有効にする
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
@@ -62,4 +63,5 @@ Rails.application.configure do
 
   # Cloud9 への接続を許可する
   config.hosts.clear
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

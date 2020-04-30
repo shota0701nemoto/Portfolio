@@ -1,3 +1,12 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.main-container {
+  background-image: url("/images/danbel.jpg");
+  height: 600px;
+  width: auto;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+
+.desctiption{
+  font-size:25px;
+}

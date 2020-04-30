@@ -1,0 +1,36 @@
+<%= form_with(model: blog, local: true) do |form| %>
+<% if blog.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+  <ul>
+    <% blog.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="title_field">
+  <%= form.label :タイトル %>
+  <%= form.text_field :title ,:size=>"60x30" %>
+</div>
+
+<div class="body_field">
+  <%= form.label :本文 %>
+  <%= form.text_area :body, id: "summernote", name: "blog[body]",:size=>"60x30" %>
+  <script>
+    $(document).ready(function() {
+      $('#summernote').summernote();
+    });
+  </script>
+
+</div>
+
+
+<button type="button" class="btn btn-success">
+  <div class="actions">
+  <%= form.submit %>
+</div>
+</button>
+<% end %>
