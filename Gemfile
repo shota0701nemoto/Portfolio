@@ -16,6 +16,7 @@ gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.4', require: false
 gem 'jquery-rails'
 
+
 gem 'carrierwave',             '1.2.2'
 gem 'mini_magick',             '4.7.0'
 gem 'rails_admin', '~> 2.0'
@@ -62,6 +63,10 @@ group :test do
   gem 'rspec-rails'
 
 
+end
+
+group :production, :staging do
+  gem 'unicorn'
 end
 
 group :production do
