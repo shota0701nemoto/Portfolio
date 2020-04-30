@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
@@ -13,6 +11,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  
 
   resources :users
 
@@ -24,7 +23,10 @@ Rails.application.routes.draw do
 
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
-  resources :gyms
+  resources :gyms do
+      
+      resources :likes, only: [:create, :destroy]
+  end
 
   resources :blogs
 end

@@ -6,6 +6,13 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :gyms, dependent: :destroy
   has_many :blogs, dependent: :destroy
+  has_many :likes
+  has_many :liked_gyms, through: :likes, source: :gym
+  
+  def already_liked?(gym)
+    self.likes.exists?(gym_id: gym.id)
+  end
+  
   validates :name,  presence: true, length: { maximum: 50 }
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -44,9 +51,4 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
-
-  def feed
-    gyms
-  end
-
 end
