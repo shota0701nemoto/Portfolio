@@ -1,10 +1,12 @@
     default: &default
       adapter: postgresql
       encoding: unicode
-      host: localhost
-      username: sahota0701nemoto  #記事内で後々出てきます。
-      password: aaaa           #記事内で後々出てきます。
+      # ご自身のpostgresqlに登録してあるユーザ名にしてください。
+      username: <%= ENV.fetch('POSTGRES_USER', 'sahota0701nemoto') %>
+      password: <%= ENV.fetch('POSTGRES_PASSWORD', 'aaaa') %>      # docker-composeのPOSTGRES_PASSWORDと揃える。
       pool: 5
+      host: <%= ENV.fetch('DATABASE_HOST', 'localhost') %> # docker-composeのサービス名にします。
+      port: <%= ENV.fetch('DATABASE_PORT') { 5432 } %>
 
     development:
       <<: *default
