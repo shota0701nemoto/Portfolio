@@ -65,10 +65,11 @@ RSpec.feature "Comments", type: :feature do
       click_link "ログイン"
       fill_in "session[email]", with: @user.email
       fill_in "session[password]", with: @user.password
+      click_button "ログインボタン"
       click_link "口コミ"
       click_link @gym.name
       fill_in 'comment_content', with: "Test Task"
       click_button 'コメントする'
-      expect(page).to have_content @gym.name
+      expect(page).to have_content "Test Task"
   end
 end
