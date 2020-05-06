@@ -66,7 +66,7 @@ group :test do
 end
 
 group :production, :staging do
-  gem 'unicorn'
+  
 end
 
 group :production do
