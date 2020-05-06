@@ -1,4 +1,4 @@
- # 【なぜこのサイト（アプリ）を作ったか】 
+ # 【なぜこのアプリを作ったか】 
 * 私自身筋トレが好きで、法人、個人共にメディアの運用経験があることからトレーニングジム紹介メディアを連想し、作成しました。  
 
 # 【作成時に意識したこと】 
@@ -21,4 +21,21 @@
 # 【できなかったこと】
 * 管理画面を自作できなかった点。
 * APIを盛り込むこと
-。
+
+# 【ER図】
+
+# 【AWS構成図】
+
+# 使用技術
+* Ruby 2.6.3
+* Ruby on Rails 6.2.4
+* PosgreSQL 9.6
+* Bootstrap,javascript
+* Rspec
+* Docker
+* Github
+* AWS(VPC,EC2,ALB,S3,Route53,ACM)
+* Capistrano
+* CircleCI(CI/CD)
+
+
