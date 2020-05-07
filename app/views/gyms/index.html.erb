@@ -5,6 +5,9 @@
     <%= render partial: 'gym', collection: @gyms, as: :gym %>
   </div>
 </div>
-<button type="button" class="btn btn-success"><%= link_to '投稿する', new_gym_path %></button>
+<div class =gym-button>
+<button type="button" class="btn btn-success">
+  <%= link_to '投稿する', new_gym_path %></button>
+  </div>
 
 <%= will_paginate @gyms, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>

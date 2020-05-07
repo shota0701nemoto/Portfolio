@@ -15,7 +15,11 @@
 <% end %>
 </div>
 <% if logged_in? %>
-<button type="button" class="btn btn-success"><%= link_to '投稿する', new_blog_path %></button>
+<div class =gym-index-button>
+<button type="button" class="btn btn-success">
+  <%= link_to '投稿する', new_blog_path %>
+</button>
+</div>
 </div>
 <% end %>
 
