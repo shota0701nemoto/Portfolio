@@ -49,4 +49,9 @@ crumb :new_blog do
   parent :blogs
 end
 
+#blogのeditページのパンくずリスト
+crumb :edit_blog do
+  link "コラムの編集", edit_blog_path
+  parent :blogs
+end
 
