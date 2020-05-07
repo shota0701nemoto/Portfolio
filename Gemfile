@@ -36,7 +36,7 @@ gem 'dotenv-rails'
 gem 'pg'
 gem 'rack-attack'
 gem 'sprockets-es6'
-
+gem 'capistrano-yarn'
 
 
 group :development, :test do
@@ -47,7 +47,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
-  gem 'capistrano-yarn'
+
 
 end
 
