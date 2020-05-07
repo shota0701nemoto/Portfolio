@@ -23,8 +23,10 @@
     <%= @blog.body %>
   </div>
 
+<div class="blog_show_button">
 <% if current_user?(@blog.user) %>
 <button type="button" class="btn btn-success"><%= link_to '編集', edit_blog_path(@blog) %> </button>
 <button type="button" class="btn btn-success"><%= link_to "削除", @gym, method: :delete,
 data: { confirm: "削除しますか？" } %></button>
+</div>
 <% end %>
