@@ -28,16 +28,10 @@ set :rbenv_ruby, '2.6.3'
 #出力するログのレベル。
 set :log_level, :debug
 
-namespace :yarn do
-  task :build do
-    on roles(:app) do
-      within fetch(:yarn_target_path, release_path) do
-        execute :yarn, "build"
-      end
-    end
-  end
-end
-after "yarn:install", "yarn:build"
+set :yarn_target_path, -> { release_path.join('subdir') } # default not set
+set :yarn_flags, '--production --silent --no-progress'    # default
+set :yarn_roles, :all                                     # default
+set :yarn_env_variables, {}                               # default
 
 namespace :deploy do
   desc 'Restart application'
