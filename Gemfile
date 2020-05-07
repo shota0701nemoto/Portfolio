@@ -35,6 +35,7 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'pg'
 gem 'rack-attack'
+gem 'sprockets-es6'
 
 
 
