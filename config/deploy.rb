@@ -1,3 +1,9 @@
+set :pg_without_sudo, false
+set :pg_host, 'localhost'
+set :pg_database, 'portfolio'
+set :pg_username, 'postgres'
+set :pg_ask_for_password, true
+
 # capistranoのバージョン固定
 lock '3.14.0'
 

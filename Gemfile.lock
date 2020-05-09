@@ -100,6 +100,9 @@ GEM
       sshkit (>= 1.9.0)
     capistrano-bundler (1.6.0)
       capistrano (~> 3.1)
+    capistrano-postgresql (6.2.0)
+      capistrano (>= 3.0)
+      sshkit (>= 1.17.0)
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -608,6 +611,7 @@ DEPENDENCIES
   cancancan
   capistrano
   capistrano-bundler
+  capistrano-postgresql (~> 6.2)
   capistrano-rails
   capistrano-rbenv
   capistrano-yarn
