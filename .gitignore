@@ -44,4 +44,4 @@ public/sitemap.xml.gz
 /docker-cmpose.yml
 
 # Ignore config/database.yml
-config/database.yml
+#config/database.yml
