@@ -1,7 +1,7 @@
 FROM ruby:2.6.3
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client yarn chromium-driver # yarnとchromium-driverを追記
 RUN mkdir /Portfolio
-# こことdocker-composeのvolumeの右辺を揃える(大文字小文字が違いました。)
+# こことdocker-composeのvolumeの右辺を揃える
 WORKDIR /Portfolio
 COPY Gemfile /Portfolio/Gemfile
 COPY Gemfile.lock /Portfolio/Gemfile.lock

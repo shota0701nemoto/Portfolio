@@ -1,64 +1,47 @@
 version: 2
 jobs:
-  docker:
-    - image: circleci/ruby:2.6.3-node-browsers-legacy
-      environment:
-        RAILS_ENV: test
-        POSTGRES_HOST: 127.0.0.1
-    - image: circleci/postgres:9.6
-      environment:
-        POSTGRES_USER: <%= ENV.fetch('POSTGRES_USER') %>
-        POSTGRES_PASSWPRD: <%= ENV.fetch('POSTGRES_PASSWORD') %>
-        POSTGRES_DB: portfolio_test
-  working_directory: ~/repo
-  steps:
-    - checkout
-    - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-    - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-    - run: yarn install
-    - save_cache:
-        paths:
-          - ./vendor/bundle
-        key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-  rspec:
-    docker:
-      - image: circleci/ruby:2.6.3-node-browsers-legacy
+   build:
+      parallelism: 3
+      docker:
+        - image: circleci/ruby:2.6.3-node
+
+        working_directory: ~/Portfolio
         environment:
-          RAILS_ENV: test
-          POSTGRES_HOST: 127.0.0.1
-      - image: circleci/postgres:9.6
-        environment:
+          PGHOST: 127.0.0.1
           POSTGRES_USER: <%= ENV.fetch('POSTGRES_USER') %>
           POSTGRES_PASSWPRD: <%= ENV.fetch('POSTGRES_PASSWORD') %>
           POSTGRES_DB: portfolio_test
-    working_directory: ~/repo
+          RAILS_ENV: test
+
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "Gemfile.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - run: yarn install
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
-      # Rspec
-      - run:
-          name: Rspec
-          command: bundle exec rspec
 
-workflows:
-  version: 2
-  rubocop_rspec:
-    jobs:
-      - rubocop
-      - rspec:
+      # Restore bundle cache
+      - type: cache-restore
+        name: Restore bundle cache
+        key: rails-demo-bundle-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Bundle Install
+          command: bundle install --path vendor/bundle
+
+      # Store bundle cache
+      - type: cache-save
+        name: Save bundle cache
+        key: rails-demo-bundle-{{ checksum 'Gemfile.lock' }}
+        paths: vendor/bundle
+
+      # Database setup
+      - run:
+          name: Database setup
+          command: |
+            bundle exec bin/rails db:create
+            bundle exec rails db:migrate
+
+      # Run rspec in parallel
+      - type: shell
+          command: |
+            bundle exec rspec --profile 10 \
+                              --out test_results/rspec.xml \
+                              --format progress \
+                              $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)

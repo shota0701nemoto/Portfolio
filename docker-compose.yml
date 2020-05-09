@@ -19,7 +19,7 @@ services:
     build: .
     command: bash -c "bin/rails db:create && bin/rails db:migrate && rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      # ここの右辺とDockerfileのWORKDIRを揃える(大文字小文字が違いました。)
+      # ここの右辺とDockerfileのWORKDIRを揃える
       - .:/Portfolio
       # あまり変更のない部分をマウントしておくことで起動を早める。
       - bundle-data:/Portfolio/vendor/bundle
