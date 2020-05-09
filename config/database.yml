@@ -19,4 +19,4 @@
     production:
       <<: *default
       database: portfolio
-      host: localhost
+      host: localhost #AWSのhost名と同じにする。
