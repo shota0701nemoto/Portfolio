@@ -6,7 +6,7 @@
       password: ENV['POSTGRES_PASSWORD']      # docker-composeのPOSTGRES_PASSWORDと揃える。
       pool: 5
       host: ENV['DATABASE_HOST'] # docker-composeのサービス名にする。
-      port: ENV['DATABASE_PORT']
+      port: 5432
 
     development:
       <<: *default
