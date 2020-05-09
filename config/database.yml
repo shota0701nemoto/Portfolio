@@ -2,11 +2,11 @@
       adapter: postgresql
       encoding: unicode
       # 自身のpostgresqlに登録してあるユーザ名にする。
-      username:  ENV['POSTGRES_USER']
-      password: <%= ENV.fetch('POSTGRES_PASSWORD') %>      # docker-composeのPOSTGRES_PASSWORDと揃える。
+      username: ENV['POSTGRES_USER']
+      password: ENV['POSTGRES_PASSWORD']      # docker-composeのPOSTGRES_PASSWORDと揃える。
       pool: 5
-      host: <%= ENV.fetch('DATABASE_HOST') %> # docker-composeのサービス名にする。
-      port: <%= ENV.fetch('DATABASE_PORT') { 5432 } %>
+      host: ENV['DATABASE_HOST'] # docker-composeのサービス名にする。
+      port: ENV['DATABASE_PORT']
 
     development:
       <<: *default
