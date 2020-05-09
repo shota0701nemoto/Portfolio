@@ -2,7 +2,8 @@
       adapter: postgresql
       encoding: unicode
       # 自身のpostgresqlに登録してあるユーザ名にする。
-      username: <%= ENV.fetch('POSTGRES_U') %>
+      #username: <%= ENV.fetch('POSTGRES_USER') %>
+      username: postgres
       password: <%= ENV.fetch('POSTGRES_PASSWORD') %>      # docker-composeのPOSTGRES_PASSWORDと揃える。
       pool: 5
       host: <%= ENV.fetch('DATABASE_HOST') %> # docker-composeのサービス名にする。
