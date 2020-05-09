@@ -19,3 +19,4 @@
     production:
       <<: *default
       database: portfolio
+      host: 13.115.179.212
