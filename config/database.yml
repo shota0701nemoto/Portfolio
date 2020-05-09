@@ -19,3 +19,4 @@
     production:
       <<: *default
       database: portfolio
+      host: localhost
