@@ -14,6 +14,7 @@ jobs:
             POSTGRES_USER: <%= ENV.fetch('POSTGRES_USER') %>
             POSTGRES_PASSWPRD: <%= ENV.fetch('POSTGRES_PASSWORD') %>
             POSTGRES_DB: portfolio_test
+      #自身のアプリ名にする
       working_directory: ~/Portfolio
       steps:
         - checkout
@@ -22,7 +23,7 @@ jobs:
             keys:
               - v1-dependencies-{{ checksum "Gemfile.lock" }}
               - v1-dependencies-
-
+    
         - run:
             name: install dependencies
             command: |
