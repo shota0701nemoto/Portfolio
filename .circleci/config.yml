@@ -9,6 +9,7 @@ jobs:
         #使ってるデータベースとバージョンを指定
         - image: circleci/postgres:9.6-alpine
           environment:
+            #それぞれ設定
             PGHOST: 127.0.0.1
             POSTGRES_USER: <%= ENV.fetch('POSTGRES_USER') %>
             POSTGRES_PASSWPRD: <%= ENV.fetch('POSTGRES_PASSWORD') %>
@@ -29,6 +30,7 @@ jobs:
               bundle install --jobs=4 --retry=3 --path vendor/bundle
 
         - save_cache:
+            key: v1-dependencies-{{ checksum "Gemfile.lock" }}
             paths:
               - ./vendor/bundle
         
