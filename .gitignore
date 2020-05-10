@@ -45,3 +45,5 @@ public/sitemap.xml.gz
 
 # Ignore config/database.yml
 #config/database.yml
+
+/secret_token.rb
