@@ -6,6 +6,7 @@ jobs:
         - image: circleci/ruby:2.6.3-node
           environment:
             - RAILS_ENV: test
+        #使ってるデータベースとバージョンを指定
         - image: circleci/postgres:9.6-alpine
           environment:
             PGHOST: 127.0.0.1
@@ -28,8 +29,8 @@ jobs:
               bundle install --jobs=4 --retry=3 --path vendor/bundle
 
         - save_cache:
-          paths:
-            - ./vendor/bundle
+            paths:
+              - ./vendor/bundle
         
         - run: bundle exec rake db:create
         - run: bundle exec rake db:schema:load
