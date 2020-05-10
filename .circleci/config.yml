@@ -30,6 +30,8 @@ jobs:
         - save_cache:
           paths:
             - ./vendor/bundle
+            
+        - step:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
         
         - run: bundle exec rake db:create
