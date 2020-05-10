@@ -4,6 +4,8 @@ set :pg_database, 'portfolio'
 set :pg_username, 'postgres'
 set :pg_ask_for_password, true
 
+set :linked_files, %w{.env}
+
 # capistranoのバージョン固定
 lock '3.14.0'
 
