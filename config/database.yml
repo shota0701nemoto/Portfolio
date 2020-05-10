@@ -15,6 +15,7 @@
     test:
       <<: *default
       database: portfolio_test
+      host: localhost
       
     production:
       <<: *default
