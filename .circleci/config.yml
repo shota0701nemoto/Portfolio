@@ -7,7 +7,7 @@ jobs:
           environment:
             - RAILS_ENV: test
         #使ってるデータベースとバージョンを指定
-        - image: circleci/postgres:9.6-alpine
+        - image: circleci/postgres:9.6
           environment:
             #それぞれ設定
             PGHOST: 127.0.0.1
@@ -35,9 +35,6 @@ jobs:
             paths:
               - ./vendor/bundle
               
-        - run:
-            name: DBの起動まで待機
-            command: dockerize -wait tcp://localhost:5432 -timeout 1m
         
         - run: bundle exec rake db:create
         - run: bundle exec rake db:schema:load
