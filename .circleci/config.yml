@@ -24,15 +24,12 @@ jobs:
         - run:
             name: install dependencies
             command: |
-              gem install bundler -v 2.0.2
-              bundle install --jobs=4 --retry=3 --path vendor/bundle
+            gem install bundler -v 2.0.2
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
 
         - save_cache:
           paths:
             - ./vendor/bundle
-            
-        - step:
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
         
         - run: bundle exec rake db:create
         - run: bundle exec rake db:schema:load
