@@ -14,5 +14,5 @@ jobs:
 
         steps:
           - checkout
-          - run: npm run test
+          - run: npm run rspec
           - run: npm run deploy
