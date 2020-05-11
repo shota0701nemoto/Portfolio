@@ -9,8 +9,7 @@ services:
     environment:
 #      # こことdatabase.ymlのpasswordは揃える。
       POSTGRES_USER: ENV['POSTGRES_USER']
-      -e POSTGRES_PASSWORD: ENV['POSTGRES_PASSWORD']
-      #POSTGRES_HOST_AUTH_METHOD: 'trust'
+      POSTGRES_PASSWORD: ENV['POSTGRES_PASSWORD']
     volumes:
       - db-data:/var/lib/postgresql/data
     # ホスト:コンテナでポートフォアワーディング。
