@@ -11,9 +11,9 @@ jobs:
           environment:
             #それぞれ設定
             PGHOST: 127.0.0.1
-            POSTGRES_USER: ENV['POSTGRES_USER']
+            POSTGRES_USER: ${POSTGRES_USER}
             POSTGRES_HOST_AUTH_METHOD: trust
-            POSTGRES_PASSWPRD: ENV['POSTGRES_PASSWORD']
+            #POSTGRES_PASSWPRD: ENV['POSTGRES_PASSWORD']
             POSTGRES_DB: portfolio_test
       #自身のアプリ名にする
       working_directory: ~/Portfolio
