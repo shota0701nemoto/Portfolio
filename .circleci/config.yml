@@ -21,25 +21,26 @@ jobs:
       working_directory: ~/Portfolio
       steps:
         - checkout
-        
+        #bundle キャッシュをリストアする
         - restore_cache:
             keys:
               - v1-dependencies-{{ checksum "Gemfile.lock" }}
               - v1-dependencies-
-    
+        # bundle install で依存関係をインストールする
         - run:
             name: install dependencies
             command: |
               gem install bundler -v 2.1.4
               bundle install --jobs=4 --retry=3 --path vendor/bundle
 
+        # bundle キャッシュを保存する
         - save_cache:
             key: v1-dependencies-{{ checksum "Gemfile.lock" }}
             paths:
               - ./vendor/bundle
               
         - run:
-            name: DBの起動を待つ。
+            name: DBの起動を待つ
             command: dockerize -wait tcp://127.0.0.1:5432 -timeout 120s
         
         - run: bundle exec rake db:create
@@ -48,7 +49,4 @@ jobs:
         # rspec
         - run:
             name: rspecを実行
-            command: |
-              mkdir /tmp/test-results
-              TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | \
-                circleci tests split --split-by=timings)"
+            command: bin/rails test
