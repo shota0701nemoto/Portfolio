@@ -5,6 +5,7 @@ jobs:
         #アプリのバージョンを指定
         - image: circleci/ruby:2.6.3-node
           environment:
+            POSTGRES_USER: postgres
             - RAILS_ENV: test
         #使ってるデータベースとバージョンを指定
         - image: circleci/postgres:9.6
