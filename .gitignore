@@ -41,7 +41,7 @@ public/sitemap.xml.gz
 /.env
 
 # Ignore Docker-cmpose.yml
-/docker-cmpose.yml
+/docker-compose.yml
 
 # Ignore config/database.yml
 #config/database.yml
