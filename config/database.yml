@@ -2,7 +2,7 @@
       adapter: postgresql
       encoding: unicode
       # 自身のpostgresqlに登録してあるユーザ名にする。
-      username: ${POSTGRES_USER}
+      username: postgres
       password: ${POSTGRES_PASSWORD}      # docker-composeのPOSTGRES_PASSWORDと揃える。
       pool: 5
       host: db # docker-composeのサービス名にする。
