@@ -49,4 +49,4 @@ jobs:
         # rspec
         - run:
             name: rspecを実行
-            command: bin/rails test
+            command: bundle exec rspec
