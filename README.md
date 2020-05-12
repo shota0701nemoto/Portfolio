@@ -28,17 +28,18 @@
 * PosgreSQL 9.6
 * Bootstrap
 * javascript
+* Github
 * Rspec
 * Docker
-* Github
-* AWS(VPC,EC2,S3,SES,ACM)
-* Capistrano
 * CircleCI(CI/CD)
+* AWS(VPC,EC2,S3,SES,ALB,Route53,ACM)
+* Capistrano
+
 
 # 【意識したこと】 
 * 自身が学んだ技術、機能を盛り込むこと。
 
-* Dockerを使用した開発環境を準備すること。 
+* インフラ部分の構築。
 
 * チュートリアルだけの技術ではなく、ネットや「プロを目指す人のためのRuby入門」などを参考にして自身が実装したい機能を実現できるメソッドを調べつつ盛り込んだ点。
 
