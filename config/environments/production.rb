@@ -113,16 +113,4 @@ Rails.application.configure do
   config.assets.precompile += Ckeditor.assets
   config.assets.precompile += %w( ckeditor/* )
   config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
-                              
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_caching = true
-  config.action_mailer.default_url_options = { host: ENV['EC2HOST'] }
-  ActionMailer::Base.smtp_settings = {
-      address:
-      port:          587,
-      domain:         Rails.application.secrets.domain,
-      authentication: :login,
-      user_name: S3_ACCESS_KEY
-      password:  S3_SECRET_KEY
-}
 end
