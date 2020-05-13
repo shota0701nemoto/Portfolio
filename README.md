@@ -16,7 +16,7 @@
 * 関連投稿表示機能
 * gemを用いた管理画面
 * ページネーション機能
-* 問い合わせ機能（内容確認機能）
+* テストログイン機能
 
 # 【ER図】
 ![image](https://user-images.githubusercontent.com/59415604/81808248-660dd800-955a-11ea-8b55-e774b09f9b7d.png)
