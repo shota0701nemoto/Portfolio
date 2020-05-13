@@ -19,8 +19,9 @@
 * 問い合わせ機能（内容確認機能）
 
 # 【ER図】
-
+![image](https://user-images.githubusercontent.com/59415604/81808248-660dd800-955a-11ea-8b55-e774b09f9b7d.png)
 # 【AWS構成図】
+![image](https://user-images.githubusercontent.com/59415604/81808359-92c1ef80-955a-11ea-80d5-8f71942c439e.png)
 
 # 使用技術
 * Ruby 2.6.3
