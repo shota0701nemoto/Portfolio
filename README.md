@@ -26,13 +26,13 @@
 * Ruby 2.6.3
 * Ruby on Rails 6.0.0
 * PosgreSQL 9.6
-* Bootstrap
+* Bootstrap,Sass,jQuery
 * javascript
 * Github
 * Rspec
 * Docker
 * CircleCI(CI/CD)
-* AWS(VPC,EC2,S3,SES,ALB,Route53,ACM)
+* AWS(VPC,EC2,S3,Route53,ACM)
 * Capistrano
 
 
