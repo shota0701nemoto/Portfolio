@@ -32,7 +32,7 @@
 * Github
 * Rspec
 * Docker
-* CircleCI(CI/CD)
+* CircleCI(CI)
 * AWS(VPC,EC2,S3,Route53,ACM)
 * Capistrano
 
