@@ -3,7 +3,7 @@ set :pg_host, 'localhost'
 set :pg_database, 'portfolio'
 set :pg_username, 'postgres'
 set :pg_ask_for_password, true
-set :port, 22
+#set :port, 22
 
 set :linked_files, %w{.env}
 
