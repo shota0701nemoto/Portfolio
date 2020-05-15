@@ -22,4 +22,4 @@
       <<: *default
       database: portfolio
       host: localhost #AWSのhost名にする。
-      port: 13.115.179.212
+      port: 5432
