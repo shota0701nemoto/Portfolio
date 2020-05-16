@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "ログイン成功です"
-      redirect_to @user
+      redirect_to root_url
     else
     flash.now[:danger] = '正しく入力してください'
       render 'new'

@@ -72,4 +72,21 @@ RSpec.feature "Comments", type: :feature do
       click_button 'コメントする'
       expect(page).to have_content "Test Task"
   end
+
+  it "userがother_userの投稿にコメントした後、削除する" do
+      @user = create(:user,email: "test2@example.com",)
+      @other_user = create(:user,email: "test1@example.com",)
+      @gym = create(:gym,user:@other_user,)
+      visit root_path
+      click_link "ログイン"
+      fill_in "session[email]", with: @user.email
+      fill_in "session[password]", with: @user.password
+      click_button "ログインボタン"
+      click_link "口コミ"
+      click_link @gym.name
+      fill_in 'comment_content', with: "Test Task"
+      click_button 'コメントする'
+      click_button '削除'
+      expect(page).to have_content "コメントを削除しました"
+  end
 end
