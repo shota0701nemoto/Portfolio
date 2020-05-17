@@ -39,15 +39,16 @@ RSpec.feature "Blogs", type: :feature do
     click_button "ログインボタン"
     click_link "口コミ"
     click_link "投稿する"
-    fill_in 'gym[name]', with: "Test Task"
+    fill_in 'gym[name]', with: "テスト"
     fill_in 'gym[content]', with: "This is Test"
     attach_file "gym_picture", "app/assets/images/test.png"
     click_button '登録する'
     click_link "コラム"
     click_on @blog.title
-    expect(page).to have_content "Test Task"
+    expect(page).to have_content @blog.title
+    expect(page).to have_content "テスト"
     click_link "Test Task"
-    expect(page).to have_content "Test Task"
+    expect(page).to have_content "This is Test"
   end
 
   it "投稿詳細ページから他の投稿詳細ページには飛ばない" do
@@ -59,7 +60,7 @@ RSpec.feature "Blogs", type: :feature do
     fill_in "session[password]", with: @user.password
     click_button "ログインボタン"
     click_link "コラム"
-    click_link "投稿する"
+    click_button "投稿する"
     fill_in 'blog[title]', with: "Test Task"
     fill_in 'blog[body]', with: "This is Test"
     click_button '登録する'

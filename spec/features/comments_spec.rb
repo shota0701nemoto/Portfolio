@@ -43,7 +43,7 @@ RSpec.feature "Comments", type: :feature do
       }.to change(Comment, :count).by(0)
     end
 
-  it "userが他のuserのコメントを削除できない" do
+  it "userがother_userのコメントを削除できない" do
       @user = create(:user,email: "test2@example.com",)
       @other_user = create(:user,email: "test1@example.com",)
       @gym = create(:gym,user:@other_user)
@@ -58,18 +58,19 @@ RSpec.feature "Comments", type: :feature do
   end
 
   it "userがother_userの投稿にコメントする" do
-      @user = create(:user,email: "test2@example.com",)
-      @other_user = create(:user,email: "test1@example.com",)
-      @gym = create(:gym,user:@other_user,)
+      @user = create(:user, email: "test2@example.com",)
+      @other_user = create(:user, email: "test1@example.com",)
+      @gym = create(:gym, user: @other_user,)
       visit root_path
       click_link "ログイン"
       fill_in "session[email]", with: @user.email
       fill_in "session[password]", with: @user.password
       click_button "ログインボタン"
-      click_link "口コミ"
+      click_on "口コミ"
       click_link @gym.name
-      fill_in 'comment_content', with: "Test Task"
-      click_button 'コメントする'
+      fill_in "comment[content]", with: "Test Task"
+      click_on 'コメントする'
+      click_on 'コメントを表示'
       expect(page).to have_content "Test Task"
   end
 

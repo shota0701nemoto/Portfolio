@@ -74,13 +74,12 @@ RSpec.feature "Likes", type: :feature do
         fill_in "session[password]", with: @user.password
         click_button "ログインボタン"
         @gym = create(:gym,user:@other_user,)
-        expect {
           click_link "口コミ"
           click_on @gym.name
           click_button 'いいね'
           expect(page).to have_content "取り消す"
           click_button "取り消す"
           expect(page).to change(@gym.likes, :count).by(0)
-    end
-  end
 end
+        end
+  end
