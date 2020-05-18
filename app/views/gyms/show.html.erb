@@ -59,11 +59,11 @@
       <a class ="gym-like-a">いいね:<%= @gym.likes.count %></a>
       <% if current_user.already_liked?(@gym) %>
       <div class ="gym-like-button">
-        <a><%= button_to '取り消す', gym_like_path(@gym), method: :delete %></a>
+        <%= button_to '取り消す', gym_like_path(@gym), method: :delete %>
       </div>
       <% else %>
       <div class ="gym-like-button">
-        <a><%= button_to 'いいね', gym_likes_path(@gym) %></a>
+        <%= button_to 'いいね', gym_likes_path(@gym) %>
       </div>
       <% end %>
     </div>

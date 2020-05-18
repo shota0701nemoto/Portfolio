@@ -16,11 +16,10 @@
     test:
       <<: *default
       database: portfolio_test
-      host: localhost
+      host: localhost #CircleCiの設定
       #host: db
       
     production:
       <<: *default
       database: portfolio
       host: localhost #AWSのhost名にする。
-      port: 5432
