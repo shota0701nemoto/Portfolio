@@ -7,7 +7,7 @@
     <h4 class ="recent_post">最近投稿されたジム</h4>
     <ul class="popular-posts">
       <li class="sidebar_row">
-       <% @gyms.each do |gym| %>
+       <% @related_gyms.each do |gym| %>
         <div class="sidebar_blogbox">
           <div class="gym_sidebar_title clearfix">
             <%= link_to (gym.name), gym_path(gym) %>
