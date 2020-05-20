@@ -68,7 +68,7 @@ RSpec.feature "Comments", type: :feature do
       click_button "ログインボタン"
       click_on "口コミ"
       click_link @gym.name
-      fill_in "comment[content]", with: "Test Task"
+      fill_in "comment_content", with: "Test Task"
       click_on 'コメントする'
       click_on 'コメントを表示'
       expect(page).to have_content "Test Task"
