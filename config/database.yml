@@ -15,8 +15,8 @@
     test:
       <<: *default
       database: portfolio_test
-      host: localhost
-      #host: db
+      #host: localhost CircleCiはlocalhostにする必要がある。
+      host: db
       
     production:
       <<: *default
