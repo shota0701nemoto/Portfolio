@@ -9,8 +9,8 @@
 }
 
 .blogtitle {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 15px;
+  margin-bottom: -10px;
   text-align: center;
   color: #333;
 }
@@ -34,12 +34,12 @@
 }
 
 .show-blogbox{
-  margin-left:70px;
+  margin-left:-70px;
 
   margin-top:90px;
   margin-bottom:300px;
-font-size:20px;
-  width:700px;
+  font-size:14px;
+  width:830px;
   line-height: 30px;
 }
 
@@ -74,7 +74,8 @@ height:600px;
 }
 
 .blog_edit_button{
-  margin-bottom:100px;
+  margin-bottom:60px;
+  margin-left:10px;
 }
 
 .blog_show_button{

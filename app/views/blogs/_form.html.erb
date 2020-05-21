@@ -1,7 +1,7 @@
 <%= form_with(model: blog, local: true) do |form| %>
 <% if blog.errors.any? %>
 <div id="error_explanation">
-  <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+  <h2><%= pluralize(blog.errors.count, "error") %> </h2>
 
   <ul>
     <% blog.errors.full_messages.each do |message| %>
@@ -15,6 +15,11 @@
   <%= form.label :タイトル %>
   <%= form.text_field :title ,:size=>"60x30" %>
 </div>
+<div class="blog_edit_button">
+  <div class="actions">
+    <%= form.submit('投稿する',class: 'btn btn-primary btn-lg my-1 mb-5 px-5') %>
+  </div>
+</div>
 
 <div class="body_field">
   <%= form.label :本文 %>
@@ -24,15 +29,5 @@
       $('#summernote').summernote();
     });
   </script>
-
 </div>
-
-<div class="blog_edit_button">
-<button type="button" class="btn btn-success">
-  <div class="actions">
-  <%= form.submit %>
-</div>
-</button>
-</div>
-
 <% end %>
