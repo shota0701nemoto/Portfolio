@@ -1,7 +1,8 @@
 class GymsController < ApplicationController
   before_action :logged_in_user, only: [:show, :create, :destroy]
   before_action :correct_user,   only: :destroy
-  MAX_DISPLAY_RELATED_PRODUCTS = 4
+  MAX_DISPLAY_RELATED_GYMS = 4
+  MAX_DISPLAY_RELATED_BLOGS = 5
 
   def index
        #debugger
@@ -18,7 +19,8 @@ class GymsController < ApplicationController
     @comment = Comment.new
     @comments = @gym.comments.paginate(page: params[:page], per_page: 10)
     @blogs = Blog.all
-    @related_gyms = Gym.includes(:comments,:pictures).sample(MAX_DISPLAY_RELATED_PRODUCTS)
+    @related_blogs = Blog.includes(:user).sample(MAX_DISPLAY_RELATED_BLOGS)
+    @related_gyms = Gym.includes(:comments,:pictures).sample(MAX_DISPLAY_RELATED_GYMS)
     @like = Like.new
   end
 

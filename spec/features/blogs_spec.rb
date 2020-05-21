@@ -24,7 +24,7 @@ RSpec.feature "Blogs", type: :feature do
  # 名前、口コミ、写真を投稿する
     fill_in 'blog[title]', with: "Test Task"
     fill_in 'blog[body]', with: "This is Test"
-    click_button '登録する'
+    click_button '投稿する'
  # 作成成功のメッセージが表示されること
     expect(page).to have_content '投稿しました'
   end
@@ -65,6 +65,6 @@ RSpec.feature "Blogs", type: :feature do
     click_button '登録する'
     click_link "コラム"
     click_link "Test Task"
-    expect(page).not_to have_content @blog.title
+    expect(page).not_to have_content @related_blogs.title
   end
 end
