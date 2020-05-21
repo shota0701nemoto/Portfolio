@@ -3,7 +3,7 @@
       encoding: unicode
       # 自身のpostgresqlに登録してあるユーザ名にする。
       username: postgres
-      password: ${POSTGRES_PASSWORD}      # docker-composeのPOSTGRES_PASSWORDと揃える。
+      password: aaaa     #${POSTGRES_PASSWORD}      # docker-composeのPOSTGRES_PASSWORDと揃える。
       pool: 5
       host: db # docker-composeのサービス名にする。
       port: 5432
@@ -15,10 +15,9 @@
     test:
       <<: *default
       database: portfolio_test
-      host: localhost
-      
+      #host: localhost
+      host: db
     production:
       <<: *default
       database: portfolio
       host: localhost #AWSのhost名にする。
-      port: 13.115.179.212
