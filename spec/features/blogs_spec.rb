@@ -30,7 +30,7 @@ RSpec.feature "Blogs", type: :feature do
   end
 
   it "投稿詳細ページからジム詳細ページに飛ぶことができる" do
-    @blog = create(:blog)
+    @related_blogs = create(:blog)
     @user = create(:user,email: "test2@example.com",)
     visit root_path
     click_link "ログイン"
@@ -44,7 +44,7 @@ RSpec.feature "Blogs", type: :feature do
     attach_file "gym_picture", "app/assets/images/test.png"
     click_button '投稿する'
     click_link "コラム"
-    click_on "Test Task"
+    click_on @related_blogs.title
     expect(page).to have_content "Test Task"
     click_link "Test Task"
     expect(page).to have_content "Test Task"
