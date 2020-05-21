@@ -44,7 +44,7 @@ RSpec.feature "Blogs", type: :feature do
     attach_file "gym_picture", "app/assets/images/test.png"
     click_button '投稿する'
     click_link "コラム"
-    click_on @related_blogs.title
+    click_on "Test Task"
     expect(page).to have_content "Test Task"
     click_link "Test Task"
     expect(page).to have_content "Test Task"
