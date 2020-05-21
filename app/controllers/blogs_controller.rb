@@ -1,10 +1,10 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  MAX_DISPLAY_RELATED_GYMS = 8
+
 
 
   def index
-    @blogs = Blog.paginate(page: params[:page], per_page: 12)
+    @blogs = Blog.paginate(page: params[:page], per_page: 6)
     @title = "コラム"
   end
 
@@ -12,7 +12,6 @@ class BlogsController < ApplicationController
   def show
 
     @gyms = Gym.all
-    @related_gyms = Gym.includes(:comments,:pictures).sample(MAX_DISPLAY_RELATED_GYMS)
     @blog = Blog.find(params[:id])
       @blogs = Blog.all
   end
