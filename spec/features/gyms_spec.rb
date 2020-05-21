@@ -24,12 +24,12 @@ RSpec.feature "Gyms", type: :feature do
     fill_in 'gym[name]', with: "Test Task"
     fill_in 'gym[content]', with: "This is Test"
     attach_file "gym_picture", "app/assets/images/test.png"
-    click_button '登録する'
+    click_button '投稿する'
     # 作成成功のメッセージが表示されること
     expect(page).to have_content '投稿ありがとうございます!'
   end
 
-  it"他人が投稿したgymを削除できない"do
+  it "他人が投稿したgymを削除できない" do
   @user = create(:user,email: "test1@example.com",)
   visit root_path
   click_link "ログイン"
@@ -44,7 +44,7 @@ RSpec.feature "Gyms", type: :feature do
   }.to change(Comment, :count).by(0)
 end
 
-it"自分が投稿したgymを削除する"do
+it "自分が投稿したgymを削除する" do
 @user = create(:user,email: "test1@example.com",)
 visit root_path
 click_link "ログイン"
@@ -56,7 +56,7 @@ click_link "投稿する"
 fill_in 'gym[name]', with: "Test Task"
 fill_in 'gym[content]', with: "This is Test"
 attach_file "gym_picture", "app/assets/images/test.png"
-click_button '登録する'
+click_button '投稿する'
 click_on 'ジム一覧'
 click_on "Test Task"
 expect{
@@ -76,7 +76,7 @@ click_link "コラム"
 click_link "投稿する"
 fill_in 'blog[title]', with: "Test Task"
 fill_in 'blog[body]', with: "This is Test"
-click_button '登録する'
+click_button '投稿する'
 click_link "口コミ"
 click_on @gym.name
 expect(page).to have_content "Test Task"
@@ -97,7 +97,7 @@ click_link "投稿する"
 fill_in 'gym[name]', with: "Test Task"
 fill_in 'gym[content]', with: "This is Test"
 attach_file "gym_picture", "app/assets/images/test.png"
-click_button '登録する'
+click_button '投稿する'
 click_link "ジム一覧"
 click_on @gym.name
 expect(page).to have_content "Test Task"
