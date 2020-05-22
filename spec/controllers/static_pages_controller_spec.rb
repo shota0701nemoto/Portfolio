@@ -6,11 +6,9 @@ RSpec.describe SessionsController, type: :controller do
 
      context 'ログインしていない場合'
 
-
-
-    it "loginページが表示される" do
-      get :new
-       expect(response).to be_successful
-    end
+       it "loginページが表示される" do
+        get :new
+        expect(response).to be_successful
+       end
   end
 end

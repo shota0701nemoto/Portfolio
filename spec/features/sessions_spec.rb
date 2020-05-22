@@ -60,17 +60,4 @@ RSpec.feature "Sessions", type: :feature do
     click_on 'ログインボタン'
     expect(page).to have_content 'ログアウト'
   end
-
-  it 'ログインに失敗する' do
-    @user = User.create(
-      id: "1",
-      name: "PortfolioTaro",
-      email: "test@example.com",
-      password: "test"
-    )
-    click_on 'ログイン'
-    fill_in 'session[password]', with: 'test'
-    click_on 'ログインボタン'
-    expect(page).to have_content 'メールアドレスまたはパスワードが間違っています'
-  end
 end

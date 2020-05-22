@@ -3,73 +3,76 @@ require 'rails_helper'
 RSpec.feature "Comments", type: :feature do
 
   describe "Comments" do
-
-    it "userが自分のgymにcommentする" do
+    it "userが自身で作成したgymにコメントをする" do
+      # ユーザーを作成
       @user = User.create(
         name: "PortfolioTaro",
         email: "test@example.com",
         password: "test"
       )
+      # トップページへアクセス
       visit root_path
+      # サインインページへ遷移
       click_link "ログイン"
+      # メアドとパスワードを入力してログイン
       fill_in "session[email]", with: @user.email
       fill_in "session[password]", with: @user.password
       click_button "ログインボタン"
-      @gym = create(:gym)
-      expect {
+      #@userがgymを投稿する
+      # タスク作成ページへ遷移
       click_link "口コミ"
-      click_on @gym.name
-      fill_in 'comment[content]', with: "Test Task"
+      click_link "投稿する"
+      # 名前、口コミ、写真を投稿する
+      fill_in 'gym[name]', with: "Test Task"
+      fill_in 'gym[content]', with: "This is Test"
+      attach_file "gym_picture", "app/assets/images/test.png"
+      click_button '投稿する'
+      # 作成成功のメッセージが表示されること
+      expect(page).to have_content '投稿ありがとうございます!'
+      click_link "口コミ"
+      expect(page).to have_content 'Test Task'
+      click_link 'Test Task'
+      fill_in 'comment[content]', with: "Test Comment"
       click_button 'コメントする'
-      expect(page).to have_content 'コメントが投稿されました'
-      }.to change(@gym.comments, :count).by(1)
+      click_button 'コメントを表示'
+      expect(page).to have_content 'Test Comment'
     end
 
-    it"userが自分のコメントを削除する "do
-      @user = create(:user,email: "test1@example.com",)
+    it "userが自身で作成したgymのコメントを消す" do
+      # ユーザーを作成
+      @user = User.create(
+        name: "PortfolioTaro",
+        email: "test@example.com",
+        password: "test"
+      )
+      # トップページへアクセス
       visit root_path
+      # サインインページへ遷移
       click_link "ログイン"
+      # メアドとパスワードを入力してログイン
       fill_in "session[email]", with: @user.email
       fill_in "session[password]", with: @user.password
       click_button "ログインボタン"
-      @gym = create(:gym)
+      #@userがgymを投稿する
+      # タスク作成ページへ遷移
       click_link "口コミ"
-      click_on @gym.name
-      fill_in "comment[content]", with: "Test Task"
-      click_on "コメントする"
-      click_on "削除"
-      expect{
-      expect(page).to have_content "コメントを削除しました"
-      }.to change(Comment, :count).by(0)
-    end
-
-  it "userが他のuserのコメントを削除できない" do
-      @user = create(:user,email: "test2@example.com",)
-      @other_user = create(:user,email: "test1@example.com",)
-      @gym = create(:gym,user:@other_user)
-      visit root_path
-      click_link "ログイン"
-      fill_in "session[email]", with: @user.email
-      fill_in "session[password]", with: @user.password
+      click_link "投稿する"
+      # 名前、口コミ、写真を投稿する
+      fill_in 'gym[name]', with: "Test Task"
+      fill_in 'gym[content]', with: "This is Test"
+      attach_file "gym_picture", "app/assets/images/test.png"
+      click_button '投稿する'
+      # 作成成功のメッセージが表示されること
+      expect(page).to have_content '投稿ありがとうございます!'
       click_link "口コミ"
-      click_on @gym.name
-      expect(page).not_to have_content "削除"
-    end
-  end
-
-  it "userがother_userの投稿にコメントする" do
-      @user = create(:user,email: "test2@example.com",)
-      @other_user = create(:user,email: "test1@example.com",)
-      @gym = create(:gym,user:@other_user,)
-      visit root_path
-      click_link "ログイン"
-      fill_in "session[email]", with: @user.email
-      fill_in "session[password]", with: @user.password
-      click_button "ログインボタン"
-      click_link "口コミ"
-      click_link @gym.name
-      fill_in 'comment_content', with: "Test Task"
+      expect(page).to have_content 'Test Task'
+      click_link 'Test Task'
+      fill_in 'comment[content]', with: "Test Comment"
       click_button 'コメントする'
-      expect(page).to have_content "Test Task"
+      click_button 'コメントを表示'
+      expect(page).to have_content 'Test Comment'
+      click_link '削除する'
+      expect(page).not_to have_content 'Test Comment'
+    end
   end
 end

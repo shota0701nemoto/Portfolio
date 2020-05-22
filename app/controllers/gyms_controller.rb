@@ -30,7 +30,7 @@ class GymsController < ApplicationController
     @gym.picture = params[:picture]
     if @gym.save
       flash[:success] = "投稿ありがとうございます!"
-      redirect_to request.referrer ||  'gyms_path'
+      redirect_to request.referrer ||  'gyms_show_path'
     else
       flash[:errors] = @gym.errors.full_messages
       redirect_to request.referrer ||  'gyms_path'
