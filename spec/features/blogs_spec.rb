@@ -30,12 +30,15 @@ RSpec.feature "Blogs", type: :feature do
   end
 
   it"userがblogを更新する"do
+    
   end
 
   it"userがblogを削除する"do
+
   end
 
-  it"other_userがblogを更新できない"do
+  it"other_userがblogを削除できない"do
+
   end
 
 end

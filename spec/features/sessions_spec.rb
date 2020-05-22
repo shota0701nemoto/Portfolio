@@ -24,6 +24,22 @@ RSpec.feature "Sessions", type: :feature do
     click_on 'アカウントを作成する'
     expect(page).to have_content 'ログアウト'
   end
+  
+  it 'アカウントを更新する' do
+    click_on 'アカウントを作成する'
+    fill_in 'user[name]', with: 'test'
+    fill_in 'user[email]', with: 'abcde@example.com'
+    fill_in 'user[password]', with: '123456'
+    fill_in 'user[password_confirmation]', with: '123456'
+    click_on 'アカウントを作成する'
+    click_on '設定'
+    fill_in 'user[name]', with: 'hogehoge'
+    fill_in 'user[email]', with: 'abcde@example.com'
+    fill_in 'user[password]', with: '123456'
+    fill_in 'user[password_confirmation]', with: '123456'
+    click_on '変更を保存する'
+    expect(page).to have_content 'ログアウト'
+  end
 
   it 'アカウントの作成に失敗する' do
     click_on 'アカウントを作成する'
