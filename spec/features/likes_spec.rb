@@ -72,5 +72,9 @@ RSpec.feature "Likes", type: :feature do
       click_link '取り消す'
       expect(page).not_to have_content "1"
     end
+    it"other_userがuserの投稿にいいねする"do
+    end
+    it"other_userがuserの投稿のいいねを取り消す"do
+    end
   end
 end

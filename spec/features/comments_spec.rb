@@ -74,5 +74,14 @@ RSpec.feature "Comments", type: :feature do
       click_link '削除する'
       expect(page).not_to have_content 'Test Comment'
     end
+
+    it"other_userがuserの作成したgymにコメントをする"do
+    end
+
+    it"other_userがuserの作成したgymにコメントしたのを消す"do
+    end
+
+    it"other_userがuserのコメントを消せない"do
+    end
   end
 end

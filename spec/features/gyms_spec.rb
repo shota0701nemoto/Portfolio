@@ -30,4 +30,10 @@ RSpec.feature "Gyms", type: :feature do
     click_link "口コミ"
     expect(page).to have_content 'Test Task'
   end
-end
+
+  it"userがgymを削除する"do
+  end
+
+  it"other_userがuserのgymを削除できない"do
+  end
+  end

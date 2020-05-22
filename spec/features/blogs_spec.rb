@@ -28,4 +28,14 @@ RSpec.feature "Blogs", type: :feature do
  # 作成成功のメッセージが表示されること
     expect(page).to have_content '投稿しました'
   end
+
+  it"userがblogを更新する"do
+  end
+
+  it"userがblogを削除する"do
+  end
+
+  it"other_userがblogを更新できない"do
+  end
+
 end
