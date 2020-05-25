@@ -1,7 +1,6 @@
 # メインのサンプルユーザーを1人作成する
-User.create!(name:  "test",
-    email: "test@gmail.com",
-    password:              "test",
-    password_confirmation: "test",
+User.create!(name:  "AdminUser",
+             email: "Admin@Admin.com",
+    password:              "Admin",
+    password_confirmation: "Admin",
     admin: true)
-

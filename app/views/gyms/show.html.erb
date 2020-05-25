@@ -33,13 +33,13 @@
       <div class="row">
         <% if @gym.picture[0].present? %>
         <div class="col-6">
-          <%= image_tag "#{@gym.picture[0].url}" %>
+          <%= image_tag "#{@gym.picture[0].url}", :alt => @gym.name %>
           <% end %>
         </div>
         <% if @gym.picture[0].present? %>
         <div class="col-4">
           <% @gym.picture.each_with_index do |picture,index| %>
-          <%= image_tag "#{@gym.picture[index].url}" %>
+          <%= image_tag "#{@gym.picture[index].url}", :alt => @gym.name %>
           <% end %>
           <% end %>
         </div>
