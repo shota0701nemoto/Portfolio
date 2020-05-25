@@ -22,4 +22,4 @@
     production:
       <<: *default
       database: portfolio
-      host: localhost #AWSのhost名にする。
+      host: 3.114.69.77 #AWSのhost名にする。
