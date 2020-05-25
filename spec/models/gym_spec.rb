@@ -25,4 +25,24 @@ RSpec.describe Gym, type: :model do
     gym.valid?
     expect(gym.errors[:picture]).to include("を入力してください")
   end
+
+  it"user_idがない場合無効である"do
+  gym = build(:gym, user_id: nil)
+  gym.valid?
+  expect(gym.errors[:user_id]).to include("を入力してください")
+  end
+
+  it"本文が200文字を超える場合無効である"do
+  gym = build(:gym, content: "a" * 201)
+  expect(gym).to be_invalid
+  end
+
+  it"タイトルが24文字を超える場合無効である"do
+  gym = build(:gym, content: "a" * 25)
+  expect(gym).to be_invalid
+  end
+
+  it""do
+
+  end
 end

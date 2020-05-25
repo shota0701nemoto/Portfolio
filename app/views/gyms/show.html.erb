@@ -6,7 +6,7 @@
     <h4 class ="recent_post">人気記事</h4>
     <ul class="popular-posts">
       <li class="sidebar_row">
-        <% @blogs.each do |blog| %>
+        <% @related_blogs.each do |blog| %>
         <div class="sidebar_blogbox">
           <div class="gym_sidebar_title clearfix">
             <%= link_to (blog.title), blog_path(blog) %>
@@ -33,13 +33,13 @@
       <div class="row">
         <% if @gym.picture[0].present? %>
         <div class="col-6">
-          <%= image_tag "#{@gym.picture[0].url}" %>
+          <%= image_tag "#{@gym.picture[0].url}", :alt => @gym.name %>
           <% end %>
         </div>
         <% if @gym.picture[0].present? %>
         <div class="col-4">
           <% @gym.picture.each_with_index do |picture,index| %>
-          <%= image_tag "#{@gym.picture[index].url}" %>
+          <%= image_tag "#{@gym.picture[index].url}", :alt => @gym.name %>
           <% end %>
           <% end %>
         </div>
@@ -59,11 +59,11 @@
       <a class ="gym-like-a">いいね:<%= @gym.likes.count %></a>
       <% if current_user.already_liked?(@gym) %>
       <div class ="gym-like-button">
-        <a><%= button_to '取り消す', gym_like_path(@gym), method: :delete %></a>
+        <%= link_to '取り消す', gym_like_path(@gym), method: :delete %>
       </div>
       <% else %>
       <div class ="gym-like-button">
-        <a><%= button_to 'いいね', gym_likes_path(@gym) %></a>
+        <%= link_to 'いいね', gym_likes_path(@gym),method: :post %>
       </div>
       <% end %>
     </div>

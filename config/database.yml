@@ -3,7 +3,11 @@
       encoding: unicode
       # 自身のpostgresqlに登録してあるユーザ名にする。
       username: postgres
+<<<<<<< HEAD
       password: aaaa
+=======
+      password: aaaa     #${POSTGRES_PASSWORD}      # docker-composeのPOSTGRES_PASSWORDと揃える。
+>>>>>>> e0e03c2f17a8f84e6dbaa6b2c356e5cb4e42708a
       pool: 5
       host: db # docker-composeのサービス名にする。
       port: 5432
@@ -11,13 +15,14 @@
     development:
       <<: *default
       database: portfolio_development
+      host: db
 
     test:
       <<: *default
       database: portfolio_test
-      host: localhost
-      
-      
+      host: localhost #CircleCiの設定たが、dockerを動かすにはdbにしなければいけない。
+      #host: db
+
     production:
       <<: *default
       database: portfolio

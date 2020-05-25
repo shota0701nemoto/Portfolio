@@ -36,9 +36,9 @@ RSpec.describe User, type: :model do
     user = User.new(
       name: "PortfolioTaro",
       email: "testaaaaaa@example.com",
-      password:"nil"
+      password:""
     )
     user.valid?
-    expect(user).to be_valid
+    expect(user).to be_invalid
   end
 end

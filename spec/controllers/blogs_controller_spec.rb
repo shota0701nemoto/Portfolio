@@ -44,8 +44,23 @@ RSpec.describe BlogsController, type: :controller do
   end
 
   describe "#destroy" do
+    before do
+      it '削除に成功する' do
+        blog_params = attributes_for(:blog)
+        post :destroy, params: {blog: blog_params }
+        expect(response).to have_http_status "200"
+      end
+    end
   end
 
-  describe "#edit" do
+  describe "#destroy" do
+    before do
+      it '編集に成功する' do
+        blog_params = attributes_for(:blog)
+        post :edit, params: {blog: blog_params }
+        expect(response).to have_http_status "200"
+      end
+    end
   end
+
 end
