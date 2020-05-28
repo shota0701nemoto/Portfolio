@@ -1,0 +1,26 @@
+inherit_from:
+  - .rubocop_airbnb.yml
+
+  #1行に記述できる文字数の制限を無効。
+Metrics/LineLength:
+  Enabled: false
+
+  #日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+
+#以下にはrubocopで検証したくないフォルダを指定する
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'bin/*'
+    - 'config/environments/*'
+    - 'config/application.rb'
+    - 'config/initializers/*'
+    - 'config/spring.rb'
+    - 'lib/tasks/*'
+    - 'vendor/**/*'
+    - 'path/ruby'
+    - 'spec/**/*'
+    - 'config/routes.rb'
+    - 'config/database.yml'
