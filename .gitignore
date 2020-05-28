@@ -49,4 +49,4 @@ public/sitemap.xml.gz
 /secret_token.rb
 
 # Ignore .DS_Store
-/.DS_Store
+*.DS_Store
