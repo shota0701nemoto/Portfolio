@@ -47,3 +47,6 @@ public/sitemap.xml.gz
 #config/database.yml
 
 /secret_token.rb
+
+# Ignore .DS_Store
+/.DS_Store
