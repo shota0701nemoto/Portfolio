@@ -58,6 +58,9 @@ https://www.kuchikomu.tokyo/
 * サイトマップ
 * 各ページのメタタグ
 
+# 【ER図】
+[ER図.pdf](https://github.com/shota0701nemoto/Portfolio/files/4707247/ER.pdf)
+
 # 【意識したこと】 
 * 自身が学んだ技術、機能を盛り込むこと。
 * インフラ部分の構築。
@@ -68,7 +71,7 @@ https://www.kuchikomu.tokyo/
 * アウトプット。つまづいた部分は全てQiitaに記録し、同じ間違いは二度としないように記事を書きました。
 
 # 【Rails以外に勉強していること】 
-* Dockerを使った開発環境のカスタム。 
+* Docker、CircleCIを使った開発環境のカスタム。 
 
 # 【できなかったこと】
 * 管理画面を自作できなかった点。
