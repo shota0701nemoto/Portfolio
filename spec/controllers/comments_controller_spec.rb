@@ -1,35 +1,17 @@
 require 'rails_helper'
 
-RSpec.describe GymsController,type: :controller do
-
-  describe "#index" do
-    before do
-      @gym = create(:gym)
-      get :index
-    end
-
-    it "indexテンプレートが表示される" do
-      expect(response).to render_template :index
-    end
-
-    it "リクエストが200を返す" do
-      expect(response).to have_http_status "200"
-    end
-
-    it "@gymsに全ての投稿@gymが含まれている" do
-      expect(assigns(:gyms)).to match_array([@gym])
-    end
-  end
+RSpec.describe CommentsController,type: :controller do
 
   describe "#show" do
     before do
       @gym = create(:gym)
       @user = create(:user, email:"asddfg@example.com" )
+      @commnet = create(:comment)
       get :show, params: { id: @gym.id }
     end
 
-    it 'ログインしていない場合はリダイレクトする' do
-      expect(response).to redirect_to login_path
+    it 'コメントが表示される' do
+      expect(response).to render_template :show
     end
   end
 

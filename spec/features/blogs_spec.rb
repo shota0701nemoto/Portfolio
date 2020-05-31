@@ -41,4 +41,7 @@ RSpec.feature "Blogs", type: :feature do
 
   end
 
+  it "50回以上一度にリロードするとサイトが止まる" do
+      visit current_path * 51
+  end
 end
