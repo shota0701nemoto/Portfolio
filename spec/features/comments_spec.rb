@@ -86,7 +86,7 @@ RSpec.feature "Comments", type: :feature do
       email: "other_user@example.com",
       password: "other_user"
     )
-    @gym
+
     # トップページへアクセス
     visit root_path
     # サインインページへ遷移
@@ -101,9 +101,10 @@ RSpec.feature "Comments", type: :feature do
     #content: "良い",
     #picture: "app/assets/images/test.png"
   #)
-    @gym = create(:gym,@user)
+    @gym = create(:gym,user:@other_user,)
     # タスク作成ページへ遷移
     click_link "口コミ"
+    click_link "test"
     end
 
     it"other_userがuserの作成したgymにコメントしたのを消す"do
