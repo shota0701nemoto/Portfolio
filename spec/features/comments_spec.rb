@@ -134,7 +134,7 @@ RSpec.feature "Comments", type: :feature do
   click_button "コメントする"
   expect(page).to have_content 'コメントが投稿されました'
   click_button "コメントを表示"
-  click_button "削除"
+  click_button "削除する"
   page.driver.browser.switch_to.alert.accept
   expect(page).to have_content 'userのコメント'
     end
