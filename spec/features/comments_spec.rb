@@ -76,6 +76,34 @@ RSpec.feature "Comments", type: :feature do
     end
 
     it"other_userがuserの作成したgymにコメントをする"do
+      @user = User.create(
+      name: "test",
+      email: "test@example.com",
+      password: "test"
+    )
+    @other_user = User.create(
+      name: "other_user",
+      email: "other_user@example.com",
+      password: "other_user"
+    )
+    @gym
+    # トップページへアクセス
+    visit root_path
+    # サインインページへ遷移
+    click_link "ログイン"
+    # メアドとパスワードを入力してログイン
+    fill_in "session[email]", with: @user.email
+    fill_in "session[password]", with: @user.password
+    click_button "ログインボタン"
+    #@userのgymを作成する
+    #@gym = Gym.create(
+    #name: "ゴールドジム",
+    #content: "良い",
+    #picture: "app/assets/images/test.png"
+  #)
+    @gym = create(:gym,@user)
+    # タスク作成ページへ遷移
+    click_link "口コミ"
     end
 
     it"other_userがuserの作成したgymにコメントしたのを消す"do
