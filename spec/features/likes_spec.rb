@@ -72,26 +72,35 @@ RSpec.feature "Likes", type: :feature do
       click_link '取り消す'
       expect(page).not_to have_content "1"
     end
+
     it"other_userがuserの投稿にいいねする"do
     end
-    it"other_userがuserの投稿のいいねを取り消す"do
+
+    it"other_userがuserの投稿のいいねを取り消せない"do
     end
-    it "ログインしたユーザーが他人の投稿にいいねをした後、取り消す" do
+
+    it "userがother_userの投稿にいいねをした後、取り消す" do
       @user = User.create(
         name: "PortfolioTaro",
         email: "test@example.com",
         password: "test"
       )
       @other_user = create(:user,email: "test1@example.com",)
+
         visit root_path
+
         click_link "ログイン"
+
         fill_in "session[email]", with: @user.email
         fill_in "session[password]", with: @user.password
         click_button "ログインボタン"
+
         @gym = create(:gym,user:@other_user,)
+
           click_link "口コミ"
           click_on @gym.name
-          click_button 'いいね'
+          click_link 'いいね'
+
           expect(page).to have_content "取り消す"
           click_button "取り消す"
           expect(page).to change(@gym.likes, :count).by(0)
