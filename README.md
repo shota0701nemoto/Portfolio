@@ -59,7 +59,7 @@ https://www.kuchikomu.tokyo/
 * 各ページのメタタグ
 
 # 【ER図】
-[ER図.pdf](https://github.com/shota0701nemoto/Portfolio/files/4707247/ER.pdf)
+![image](https://user-images.githubusercontent.com/59415604/83347079-4699ec00-a35d-11ea-8144-49514d61c55e.png)
 
 # 【意識したこと】 
 * 自身が学んだ技術、機能を盛り込むこと。
