@@ -102,7 +102,7 @@ RSpec.feature "Likes", type: :feature do
           click_link 'いいね'
 
           expect(page).to have_content "取り消す"
-          click_button "取り消す"
+          click_link "取り消す"
           expect(page).to change(@gym.likes, :count).by(0)
 end
         end

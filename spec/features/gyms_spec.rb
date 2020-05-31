@@ -82,7 +82,7 @@ RSpec.feature "Gyms", type: :feature do
 
   click_link "口コミ"
   click_link @gym.name
-  expect(page).to have_content '削除'
+  expect(page).not_to have_content '削除'
 
   end
   end
