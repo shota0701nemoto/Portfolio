@@ -31,6 +31,25 @@ RSpec.feature "Blogs", type: :feature do
 
   it"userがblogを更新する"do
 
+    @user = User.create(
+    name: "PortfolioTaro",
+    email: "test@example.com",
+    password: "test"
+    )
+    @blog = create(:blog,user:@user,)
+
+    visit root_path
+
+    click_link "ログイン"
+
+    fill_in "session[email]", with: @user.email
+    fill_in "session[password]", with: @user.password
+    click_button "ログインボタン"
+
+  click_link "コラム"
+  click_link @blog.title
+  click_link "編集"
+  click_link "投稿する"
   end
 
   it"userがblogを削除する"do
@@ -39,9 +58,5 @@ RSpec.feature "Blogs", type: :feature do
 
   it"other_userがblogを削除できない"do
 
-  end
-
-  it "50回以上一度にリロードするとサイトが止まる" do
-      visit current_path * 51
   end
 end
