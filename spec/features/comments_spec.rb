@@ -166,10 +166,13 @@ RSpec.feature "Comments", type: :feature do
   click_button "ログインボタン"
 
   @gym = create(:gym,user:@other_user,)
-  @comment = create(:comment,gym:@gym,user:@other_user,)
+  #@comment = create(:comment,gym:@gym,user:@other_user,)
+  @commnent = User.create(
+    content: "testcomment",
+  )
   # タスク作成ページへ遷移
   click_link "口コミ"
-  click_link "test"
+  click_link "testcomment"
   click_button "コメントを表示"
   expect(page).not_to have_content '削除する'
     end
