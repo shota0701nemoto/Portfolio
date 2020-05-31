@@ -166,7 +166,7 @@ RSpec.feature "Comments", type: :feature do
   click_button "ログインボタン"
 
   @gym = create(:gym,user:@other_user,)
-  @comment = create(:comment,gym:@gym,)
+  @comment = create(:comment,gym:@gym,user:@other_user,)
   # タスク作成ページへ遷移
   click_link "口コミ"
   click_link "test"
