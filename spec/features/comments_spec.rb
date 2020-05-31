@@ -107,7 +107,7 @@ RSpec.feature "Comments", type: :feature do
     click_link "test"
     fill_in 'comment[content]', with: "userのコメント"
     click_button "コメントする"
-    expect(page).not_to have_content 'コメントが投稿されました'
+    expect(page).to have_content 'コメントが投稿されました'
     end
 
     it"other_userがuserの作成したgymにコメントしたのを消す"do
