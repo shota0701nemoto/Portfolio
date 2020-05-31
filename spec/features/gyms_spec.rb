@@ -46,23 +46,43 @@ RSpec.feature "Gyms", type: :feature do
   fill_in "session[email]", with: @user.email
   fill_in "session[password]", with: @user.password
   click_button "ログインボタン"
-  #@userがgymを投稿する
   # タスク作成ページへ遷移
   click_link "口コミ"
   click_link "投稿する"
-  # 名前、口コミ、写真を投稿する
-  #fill_in 'gym[name]', with: "Test Task"
-  #fill_in 'gym[content]', with: "This is Test"
-  #attach_file "gym_picture", "app/assets/images/test.png"
-  #click_button '投稿する'
-  # 作成成功のメッセージが表示されること
-  #expect(page).to have_content '投稿ありがとうございます!'
+
   click_link "口コミ"
   click_link @gym.name
   click_button "削除"
-  
+
   end
 
-  it"other_userがuserのgymを削除できない"do
+  it"userがother_userのgymを削除できない"do
+  @user = User.create(
+    name: "PortfolioTaro",
+    email: "test@example.com",
+    password: "test"
+  )
+  @other_user = User.create(
+    name: "other_user",
+    email: "other_user@example.com",
+    password: "other_user"
+    )
+  @gym = create(:gym,user:@other_user,)
+  # トップページへアクセス
+  visit root_path
+  # サインインページへ遷移
+  click_link "ログイン"
+  # メアドとパスワードを入力してログイン
+  fill_in "session[email]", with: @user.email
+  fill_in "session[password]", with: @user.password
+  click_button "ログインボタン"
+  # タスク作成ページへ遷移
+  click_link "口コミ"
+  click_link "投稿する"
+
+  click_link "口コミ"
+  click_link @gym.name
+  expect(page).to have_content '削除'
+
   end
   end
