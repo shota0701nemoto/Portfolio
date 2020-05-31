@@ -100,6 +100,7 @@ RSpec.feature "Likes", type: :feature do
           click_link "口コミ"
           click_on @gym.name
           click_link 'いいね'
+          expect(page).to change(@gym.likes, :count).by(1)
 
           expect(page).to have_content "取り消す"
           click_link "取り消す"
