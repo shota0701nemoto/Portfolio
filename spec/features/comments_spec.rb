@@ -167,7 +167,7 @@ RSpec.feature "Comments", type: :feature do
 
   @gym = create(:gym,user:@other_user,)
   #@comment = create(:comment,gym:@gym,user:@other_user,)
-  @commnent = User.create(
+  @commnent = Comment.create(
     content: "testcomment",
   )
   # タスク作成ページへ遷移
