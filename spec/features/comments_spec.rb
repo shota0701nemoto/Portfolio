@@ -172,7 +172,7 @@ RSpec.feature "Comments", type: :feature do
   )
   # タスク作成ページへ遷移
   click_link "口コミ"
-  click_link "testcomment"
+  click_link "test"
   click_button "コメントを表示"
   expect(page).not_to have_content '削除する'
     end
