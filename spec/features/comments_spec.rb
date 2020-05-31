@@ -105,6 +105,9 @@ RSpec.feature "Comments", type: :feature do
     # タスク作成ページへ遷移
     click_link "口コミ"
     click_link "test"
+    fill_in 'comment[content]', with: "userのコメント"
+    click_button "コメントする"
+    expect(page).not_to have_content 'コメントが投稿されました'
     end
 
     it"other_userがuserの作成したgymにコメントしたのを消す"do
