@@ -49,7 +49,7 @@ RSpec.feature "Blogs", type: :feature do
   click_link "コラム"
   click_link @blog.title
   click_link "編集"
-  click_link "投稿する"
+  click_button "投稿する"
   end
 
   it"userがblogを削除する"do
