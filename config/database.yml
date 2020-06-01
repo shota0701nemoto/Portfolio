@@ -16,7 +16,8 @@
     test:
       <<: *default
       database: portfolio_test
-      host: localhost #CircleCiの設定たが、dockerを動かすにはdbにしなければいけない。
+      host: <%= DATABASE_HOST %>
+      #CircleCiの設定たが、dockerを動かすにはdbにしなければいけない。
       #host: db
 
     production:

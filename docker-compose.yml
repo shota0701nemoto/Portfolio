@@ -7,6 +7,7 @@ services:
       - ./.env
       # envを読み込んだだけではcomposeの中でしか公開されないためenvironmentで宣言
     environment:
+      DATABASE_HOST: db
       # こことdatabase.ymlのpasswordは揃える。
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: aaaa
