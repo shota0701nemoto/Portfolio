@@ -37,7 +37,7 @@ gem 'pg'
 gem 'rack-attack'
 gem 'sprockets-es6'
 gem 'capistrano-yarn'
-gem 'parser'
+#gem 'parser'
 
 
 group :development, :test do
