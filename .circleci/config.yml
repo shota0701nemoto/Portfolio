@@ -13,7 +13,7 @@ jobs:
           environment:
             #それぞれ設定
             #PGHOST: 127.0.0.1
-            #DATABASE_HOST: localhost
+            DATABASE_HOST: db
             POSTGRES_USER: postgres
             POSTGRES_HOST_AUTH_METHOD: trust
             #POSTGRES_PASSWPRD: ENV['POSTGRES_PASSWORD']
