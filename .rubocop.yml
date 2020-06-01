@@ -1,4 +1,6 @@
- #1行に記述できる文字数の制限を無効。
+
+
+  #1行に記述できる文字数の制限を無効。
 Metrics/LineLength:
   Enabled: false
 
