@@ -48,7 +48,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano-postgresql', '~> 6.2'
-  gem 'rubocop'
+  gem 'rubocop-airbnb'
 end
 
 group :production, :staging do
