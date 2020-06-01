@@ -1,17 +1,17 @@
-class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
-MAX_DISPLAY_RELATED_GYMS = 8
+# frozen_string_literal: true
 
+class BlogsController < ApplicationController
+  before_action :set_blog, only: %i[show edit update destroy]
+  MAX_DISPLAY_RELATED_GYMS = 8
 
   def index
     @blogs = Blog.paginate(page: params[:page], per_page: 12)
-    @title = "コラム"
+    @title = 'コラム'
   end
 
-
   def show
-    #@gyms = Gym.all
-    @related_gyms = Gym.includes(:comments,:pictures).sample(MAX_DISPLAY_RELATED_GYMS)
+    # @gyms = Gym.all
+    @related_gyms = Gym.includes(:comments, :pictures).sample(MAX_DISPLAY_RELATED_GYMS)
     @blog = Blog.find(params[:id])
     @blogs = Blog.all
   end
@@ -22,8 +22,7 @@ MAX_DISPLAY_RELATED_GYMS = 8
   end
 
   # GET /blogs/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /blogs
   # POST /blogs.json
@@ -40,7 +39,6 @@ MAX_DISPLAY_RELATED_GYMS = 8
       end
     end
   end
-
 
   def update
     respond_to do |format|
@@ -66,12 +64,11 @@ MAX_DISPLAY_RELATED_GYMS = 8
 
   private
 
-    def set_blog
-      @blog = Blog.find(params[:id])
-    end
+  def set_blog
+    @blog = Blog.find(params[:id])
+  end
 
-
-    def blog_params
-        params.require(:blog).permit(:title, :body, :user)
-    end
+  def blog_params
+    params.require(:blog).permit(:title, :body, :user)
+  end
 end

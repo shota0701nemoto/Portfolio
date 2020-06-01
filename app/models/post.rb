@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Post < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
@@ -22,12 +24,9 @@ class Post < ApplicationRecord
   def sum_of_of_total_calorie
     carb_calorie + protein_calorie + fat_calorie
   end
-  
+
   # アップロードされた画像のサイズをバリデーションする
   def picture_size
-    if picture.size > 5.megabytes
-      errors.add(:picture, "should be less than 5MB")
-    end
+    errors.add(:picture, 'should be less than 5MB') if picture.size > 5.megabytes
   end
-  
 end
