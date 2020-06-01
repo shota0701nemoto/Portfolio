@@ -37,6 +37,7 @@ gem 'pg'
 gem 'rack-attack'
 gem 'sprockets-es6'
 gem 'capistrano-yarn'
+gem 'rubocop', require: false
 
 
 group :development, :test do
@@ -60,7 +61,6 @@ group :development do
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.1.0'
   gem 'spring-watcher-listen', '2.0.1'
-  gem 'rubocop', require: false
 end
 
 group :test do
