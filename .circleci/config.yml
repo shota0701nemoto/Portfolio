@@ -5,7 +5,6 @@ jobs:
         #アプリのバージョンを指定
         - image: circleci/ruby:2.6.3-node
           environment:
-            DATABASE_HOST: db
             POSTGRES_USER: postgres
             PGHOST: 127.0.0.1
             RAILS_ENV: test
@@ -14,6 +13,7 @@ jobs:
           environment:
             #それぞれ設定
             #PGHOST: 127.0.0.1
+            DATABASE_HOST: localhost
             POSTGRES_USER: postgres
             POSTGRES_HOST_AUTH_METHOD: trust
             #POSTGRES_PASSWPRD: ENV['POSTGRES_PASSWORD']
