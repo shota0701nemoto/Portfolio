@@ -37,7 +37,7 @@ gem 'redcarpet'
 gem 'sitemap_generator'
 gem 'sprockets-es6'
 gem 'summernote-rails'
-# gem 'parser'
+gem 'parser', '~> 2.7', '>= 2.7.1.3'
 
 group :development, :test do
   gem 'byebug', '11.0.1', platforms: %i[mri mingw x64_mingw]
