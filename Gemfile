@@ -29,7 +29,7 @@ gem 'meta-tags'
 gem 'sitemap_generator'
 gem 'rails-i18n', '~> 6.0.0'
 gem 'paperclip'
-gem 'bootstrap' 
+gem 'bootstrap'
 gem "gretel"
 gem 'devise'
 gem 'dotenv-rails'
@@ -48,7 +48,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano-postgresql', '~> 6.2'
-  gem 'rubocop-airbnb'
+  gem 'rubocop', require: false
 end
 
 group :production, :staging do
@@ -78,7 +78,7 @@ group :test do
 end
 
 group :production, :staging do
-  
+
 end
 
 group :production do
