@@ -37,7 +37,6 @@ gem 'pg'
 gem 'rack-attack'
 gem 'sprockets-es6'
 gem 'capistrano-yarn'
-gem 'rubocop', require: false
 
 
 group :development, :test do
@@ -49,6 +48,7 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano-postgresql', '~> 6.2'
+  gem 'rubocop'
 end
 
 group :production, :staging do
