@@ -3,8 +3,9 @@
 <div class="container">
   <%= search_form_for @search do |f| %>
   <%= f.label :name, 'ジム' %>
-  <%= f.search_field :name_cont ,placeholder: '検索するテキストを入力...' %>
-  <%= f.submit '検索', class: "btn btn-success" %>
+   <dt><%= f.search_field :name_cont ,placeholder: '検索するテキストを入力...' %> </dt>
+  <dt class="search">
+    <%= f.submit '検索', class: "btn btn-success" %></dt>
 <% end %>
   <div class="row">
     <% if @check.present? %>
