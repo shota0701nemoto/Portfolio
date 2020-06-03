@@ -58,14 +58,17 @@
 }
 
 
-dl.container{
-  width: 350px;
-  position:relative;
-  background-color:#fff;
-  border:1px solid #aaa;
-  border-radius:6px;
+.search-field{
+  font-size:20px;
+  width:400px;
+  height:30px;
 
 }
+
 .search{
   padding: 5px;
+}
+
+.search-field-name{
+  font-size:20px;
 }
