@@ -5,6 +5,7 @@ class BlogsController < ApplicationController
   MAX_DISPLAY_RELATED_GYMS = 8
 
   def index
+    @user = User.all
     @blogs = Blog.paginate(page: params[:page], per_page: 12)
     @title = 'コラム'
   end

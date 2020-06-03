@@ -26,17 +26,17 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
 
   resources :gyms do
-
-      resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
 
   resources :blogs
   
+  resources :relationships, only: [:create, :destroy]
+  
   resources :contacts, only: %i(new create) do
       collection do
-          post :new, path: :new, as: :new, action: :back
-          post :confirm
+        post :new, path: :new, as: :new, action: :back
+        post :confirm
       end
   end
-  
 end

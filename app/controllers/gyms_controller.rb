@@ -8,6 +8,7 @@ class GymsController < ApplicationController
 
   def index
     # debugger
+    @user = User.all
     @gyms = Gym.paginate(page: params[:page], per_page: 18)
     @search = Gym.ransack(params[:q])
     @gym_search = @search.result
@@ -27,6 +28,9 @@ class GymsController < ApplicationController
     @related_blogs = Blog.includes(:user).sample(MAX_DISPLAY_RELATED_BLOGS)
     @related_gyms = Gym.includes(:comments, :pictures).sample(MAX_DISPLAY_RELATED_GYMS)
     @like = Like.new
+    @users = User.all
+    #@user = User.find(params[:id])
+    @user = User.find(1)
   end
 
   # ログインしたユーザーがジムを投稿する
