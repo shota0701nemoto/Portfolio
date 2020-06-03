@@ -108,7 +108,7 @@ RSpec.feature "Gyms", type: :feature do
     click_link "口コミ"
     click_link "投稿する"
 
-    fill_in "q[name_cont]", with: "ゴールドジム"
+    fill_in "[name_cont]", with: "ゴールドジム"
     click_link "検索"
     expect(page).not_to have_content 'ゴールドジム'
   end
