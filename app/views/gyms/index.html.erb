@@ -2,8 +2,8 @@
 <% breadcrumb :gyms %>
 <div class="container">
   <%= search_form_for @search do |f| %>
-  <%= f.label :name, 'ジム' %>
-   <dt><%= f.search_field :name_cont ,placeholder: '検索するテキストを入力...' %> </dt>
+  <%= f.label :name, 'ジム名' %>
+   <dt><%= f.search_field :name_cont ,placeholder: '検索するジム名を入力...' %> </dt>
   <dt class="search">
     <%= f.submit '検索', class: "btn btn-success" %></dt>
 <% end %>
