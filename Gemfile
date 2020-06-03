@@ -37,6 +37,7 @@ gem 'redcarpet'
 gem 'sitemap_generator'
 gem 'sprockets-es6'
 gem 'summernote-rails'
+gem 'ransack'
 #gem 'parser', '~> 2.7', '>= 2.7.1.3'
 
 group :development, :test do

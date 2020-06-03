@@ -52,7 +52,7 @@ jobs:
             name: rspecを実行
             command: bundle exec rspec
 
-        # rubocopを実行す る
-        - run:
-            name: rubocopを実行
-            command: bundle exec rubocop
+        # rubocopを実行する
+        #- run:
+            #name: rubocopを実行
+            #command: bundle exec rubocop

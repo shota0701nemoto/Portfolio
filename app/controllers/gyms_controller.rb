@@ -9,6 +9,9 @@ class GymsController < ApplicationController
   def index
     # debugger
     @gyms = Gym.paginate(page: params[:page], per_page: 18)
+    @search = Gym.ransack(params[:q])
+    @gym_search = @search.result
+    @check = params[:q]
   end
 
   def new
