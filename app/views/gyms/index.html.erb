@@ -2,8 +2,8 @@
 <% breadcrumb :gyms %>
 <div class="container">
   <%= search_form_for @search do |f| %>
-  <%= f.label :name, '名前' %>
-  <%= f.search_field :name_cont %>
+  <%= f.label :name, 'ジム' %>
+  <%= f.search_field :name_cont ,placeholder: '検索するテキストを入力...' %>
   <%= f.submit '検索', class: "btn btn-success" %>
 <% end %>
   <div class="row">
@@ -11,6 +11,7 @@
       <%= render partial: 'gym', collection: @gym_search, as: :gym %>
     <% else %>
       <%= render partial: 'gym', collection: @gyms, as: :gym %>
+      <% end %>
   </div>
 </div>
 <div class =gym-button>
@@ -19,4 +20,3 @@
   </div>
 
 <%= will_paginate @gyms, :previous_label => ' &lt 前へ', :next_label => '次へ &gt' %>
-<% end %>
