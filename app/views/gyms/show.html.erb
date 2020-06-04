@@ -69,6 +69,7 @@
     </div>
 
     <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
+    <%= render 'relationships/follow', user: @user %>
     <p>
       <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         コメントを表示
