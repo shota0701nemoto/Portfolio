@@ -27,12 +27,13 @@ Rails.application.routes.draw do
 
   resources :gyms do
     resources :likes, only: [:create, :destroy]
+    resources :relationships, only: [:create, :destroy]
   end
 
   resources :blogs
-  
-  resources :relationships, only: [:create, :destroy]
-  
+
+
+
   resources :contacts, only: %i(new create) do
       collection do
         post :new, path: :new, as: :new, action: :back

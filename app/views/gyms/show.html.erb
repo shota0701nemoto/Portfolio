@@ -32,17 +32,17 @@
     <div class="gym_picture">
       <div class="row">
         <% if @gym.picture[0].present? %>
-        <div class="col-6">
+        <ul class="col-6">
           <%= image_tag "#{@gym.picture[0].url}", :alt => @gym.name %>
           <% end %>
-        </div>
+        </ul>
         <% if @gym.picture[0].present? %>
-        <div class="col-4">
+        <li class="col-4">
           <% @gym.picture.each_with_index do |picture,index| %>
           <%= image_tag "#{@gym.picture[index].url}", :alt => @gym.name %>
           <% end %>
           <% end %>
-        </div>
+        </li>
       </div>
     </div>
     <h4 class ="ctitle"> <%= @gym.content %></h4>
@@ -67,9 +67,11 @@
       </div>
       <% end %>
     </div>
-
+      <div class ="user-follow-button">
+    <%= render 'relationships/follow', user: @gym.user %>
+      </div>
     <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
-    <%= render 'relationships/follow', user: @user %>
+
     <p>
       <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         コメントを表示
