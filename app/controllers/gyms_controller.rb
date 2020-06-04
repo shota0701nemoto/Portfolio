@@ -29,8 +29,9 @@ class GymsController < ApplicationController
     @related_gyms = Gym.includes(:comments, :pictures).sample(MAX_DISPLAY_RELATED_GYMS)
     @like = Like.new
     @users = User.all
-    #@user = User.find(params[:id])
+    #user = User.find(params[:id])
     #@user = User.find(1)
+    #@user = User.find([:follow_id])
   end
 
   # ログインしたユーザーがジムを投稿する
