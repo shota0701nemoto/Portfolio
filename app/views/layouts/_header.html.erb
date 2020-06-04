@@ -8,7 +8,7 @@
         <li class="active"><%= link_to "コラム", blogs_path %></li>
         <li class="active"><%= link_to "口コミ", gyms_path %></li>
         <% if logged_in? %>
-          <li class="active"><%= link_to "マイページ", user_path(@user) %></li>
+          <li class="active"><%= link_to "マイページ", user_path(current_user) %></li>
         <% if current_user.try(:admin?) %>
           <li class="active"><%= link_to "管理画面", "/admin" %></li>
         <% end %>

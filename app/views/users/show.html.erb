@@ -1,12 +1,24 @@
 <% provide(:title, @user.name) %>
+<h1><%= @user.name %></h1>
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
 
-        
 
-    </section>
-  </aside>
+        <h2 class="user-gym-post">
+          投稿数
+          <div class="user-gym-post-count">
+         <%= @user.gyms.count %>
+         </div>
+
+        </h2>
+        <h2 class="user-gym-follow">
+          フォロワー
+          <div class="user-gym-follow-count">
+            <%= @user.gyms.count %>
+            </div>
+        </h2>
+
+
+
 
 
 </div>

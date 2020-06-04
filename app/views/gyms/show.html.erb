@@ -66,10 +66,6 @@
         <%= link_to 'いいね', gym_likes_path(@gym),method: :post %>
       </div>
       <% end %>
-
-
-        <%= render 'relationships/follow', user: @user %>
-      
     </div>
 
     <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>

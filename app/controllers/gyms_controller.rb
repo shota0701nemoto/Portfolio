@@ -30,7 +30,7 @@ class GymsController < ApplicationController
     @like = Like.new
     @users = User.all
     #@user = User.find(params[:id])
-    @user = User.find(1)
+    #@user = User.find(1)
   end
 
   # ログインしたユーザーがジムを投稿する

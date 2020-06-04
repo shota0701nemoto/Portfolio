@@ -11,9 +11,10 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.all
+    #@user = User.all
+    #@gyms = @user.gyms.find(params[:id])
     @user = User.find(params[:id])
-    
+
   end
 
   def new

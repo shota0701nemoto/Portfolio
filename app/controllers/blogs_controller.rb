@@ -11,7 +11,8 @@ class BlogsController < ApplicationController
   end
 
   def show
-    # @gyms = Gym.all
+    @gyms = Gym.all
+    @gym = Gym.find(params[:id])
     @related_gyms = Gym.includes(:comments, :pictures).sample(MAX_DISPLAY_RELATED_GYMS)
     @blog = Blog.find(params[:id])
     @blogs = Blog.all
