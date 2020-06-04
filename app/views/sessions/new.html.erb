@@ -16,7 +16,10 @@
         <span>Remember me</span>
       <% end %>
 
-      
+      <%= f.submit "ログインボタン", class: "btn btn-primary" %>
+      <%= f.hidden_field :email, value: 'test@example.com' %>
+      <%= f.hidden_field :password, value: 'test' %>
+      <%= f.submit 'テストログイン', class: "btn btn-primary" %>
     <% end %>
 
     <p class ="signup"><%= link_to "アカウントを作成する", signup_path %></p>
