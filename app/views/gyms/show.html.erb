@@ -30,7 +30,7 @@
   <div class="show-gymbox">
     <h2 class ="gym_name"><%= @gym.name %></h2>
     <div class="gym_picture">
-      <div class="row">
+      <div class="gym-show-row">
         <% if @gym.picture[0].present? %>
         <ul class="col-6">
           <%= image_tag "#{@gym.picture[0].url}", :alt => @gym.name %>
