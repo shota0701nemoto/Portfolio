@@ -33,7 +33,7 @@ class GymsController < ApplicationController
     #@user = User.find(params[:id])
     #@user = User.find(1)
     #@user = User.find([:follow_id])
-    
+
   end
 
   # ログインしたユーザーがジムを投稿する
