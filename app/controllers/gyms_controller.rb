@@ -29,7 +29,8 @@ class GymsController < ApplicationController
     @related_gyms = Gym.includes(:comments, :pictures).sample(MAX_DISPLAY_RELATED_GYMS)
     @like = Like.new
     @users = User.all
-    @user = User.where(id: params[:user_id]).last
+    #@user = User.where(id: params[:user_id]).last
+    @user = @gym.user
 
     #@gym_user = @gym.user
 

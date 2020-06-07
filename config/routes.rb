@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-
   resources :users
 
   resources :account_activations, only: [:edit]
@@ -27,14 +26,11 @@ Rails.application.routes.draw do
 
   resources :gyms do
     resources :likes, only: [:create, :destroy]
-    
   end
 
   resources :relationships
 
   resources :blogs
-
-
 
   resources :contacts, only: %i(new create) do
       collection do

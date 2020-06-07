@@ -6,6 +6,8 @@ padding-left: 70px;
 
 }
 
+
+
 .blogbox {
   height: 120px;
   width: 110%;
@@ -26,6 +28,7 @@ padding-left: 70px;
 .blogbody{
   font-size: 14px;
   line-height: 1.5;
+  width: 110px;
 }
 
 .container{
@@ -42,13 +45,13 @@ padding-left: 70px;
 }
 
 .show-blogbox{
-  margin-left:-30px;
-
+  margin-left:30px;
   margin-top:90px;
-  margin-bottom:300px;
+  margin-bottom:150px;
 font-size:14px;
-  width:830px;
+  width:150px;
   line-height: 30px;
+  word-wrap: break-all;
 }
 
 .blog_show_button{
