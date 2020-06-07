@@ -27,8 +27,10 @@ Rails.application.routes.draw do
 
   resources :gyms do
     resources :likes, only: [:create, :destroy]
-    resources :relationships, only: [:create, :destroy]
+    
   end
+
+  resources :relationships
 
   resources :blogs
 

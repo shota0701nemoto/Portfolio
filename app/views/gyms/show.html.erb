@@ -51,6 +51,11 @@
       <%= link_to "削除", @gym, method: :delete,data: { confirm: "削除しますか？" } %>
       <% end %>
     </button>
+
+    <div class ="user-follow-button">
+    <%= render 'relationships/follow', user: @gym.user %>
+    </div>
+
     <button type="button" class="btn btn-success">
       <%= link_to '戻る', gyms_path %>
     </button>
@@ -67,9 +72,6 @@
       </div>
       <% end %>
     </div>
-      <div class ="user-follow-button">
-    <%= render 'relationships/follow', user: @gym.user %>
-      </div>
     <h5 class ="ctitle"><%= render partial:'comments/comment_form' %></h5>
 
     <p>

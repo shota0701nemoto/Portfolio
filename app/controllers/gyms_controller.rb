@@ -30,7 +30,9 @@ class GymsController < ApplicationController
     @like = Like.new
     @users = User.all
     @user = User.where(id: params[:user_id]).last
-  
+
+    #@gym_user = @gym.user
+
     #@user = User.find(params[:id])
     #@user = User.find(1)
     #@user = User.find([:follow_id])
