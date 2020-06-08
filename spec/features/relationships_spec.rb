@@ -65,3 +65,4 @@ RSpec.feature "Relationships", type: :feature do
     expect(page).to have_content 'ユーザーのフォローを解除しました'
   end
 end
+end
