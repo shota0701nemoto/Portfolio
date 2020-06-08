@@ -26,7 +26,7 @@ RSpec.feature "Relationships", type: :feature do
     click_link "口コミ"
     click_link @gym.name
 
-    click_link "フォロー"
+    click_button "フォロー"
 
     expect(page).to have_content 'ユーザーをフォローしました'
   end
@@ -53,14 +53,14 @@ RSpec.feature "Relationships", type: :feature do
     click_link "口コミ"
     click_link @gym.name
 
-    click_link "フォロー"
+    click_button "フォロー"
 
     expect(page).to have_content 'ユーザーをフォローしました'
 
     click_link "口コミ"
     click_link @gym.name
 
-    click_link "外す"
+    click_button "外す"
 
     expect(page).to have_content 'ユーザーのフォローを解除しました'
   end
