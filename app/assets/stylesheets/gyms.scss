@@ -21,14 +21,39 @@
   line-height: 1.5;
 }
 
+.gym-show-row{
+  display:flex;
+  flex-direction: column;
+}
+
+.col-6{
+  zoom: 1.7;
+  margin:auto;
+
+  margin-bottom:25px;
+  margin-top:25px;
+}
+
+.gym-show-row{
+
+}
+
+.col-4{
+position:relative;
+list-style:none;
+margin-right:50px;
+}
+
 
 .gympicture img {
-  width: 80%;
+  width: 100%;
 }
 
 .gympicture {
   margin-bottom : 10px;
   margin-top: auto;
+
+
 }
 
 .gym-like {
@@ -55,4 +80,31 @@
 
 .gym-button {
     margin-bottom:100px;
+}
+
+.user-follow-button{
+  width:80px;
+  font-size:auto;
+  font-weight:bold;
+  text-decoration:none;
+  text-align:center;
+  padding-top:8px;
+  padding-bottom:8px;
+
+}
+
+
+.search-field{
+  font-size:20px;
+  width:400px;
+  height:30px;
+
+}
+
+.search{
+  padding: 5px;
+}
+
+.search-field-name{
+  font-size:20px;
 }

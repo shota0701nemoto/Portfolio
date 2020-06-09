@@ -76,12 +76,105 @@ RSpec.feature "Comments", type: :feature do
     end
 
     it"other_userがuserの作成したgymにコメントをする"do
+      @user = User.create(
+      name: "test",
+      email: "test@example.com",
+      password: "test"
+    )
+    @other_user = User.create(
+      name: "other_user",
+      email: "other_user@example.com",
+      password: "other_user"
+    )
+
+    # トップページへアクセス
+    visit root_path
+    # サインインページへ遷移
+    click_link "ログイン"
+    # メアドとパスワードを入力してログイン
+    fill_in "session[email]", with: @user.email
+    fill_in "session[password]", with: @user.password
+    click_button "ログインボタン"
+
+    @gym = create(:gym,user:@other_user,)
+    # タスク作成ページへ遷移
+    click_link "口コミ"
+    click_link "test"
+    fill_in 'comment[content]', with: "userのコメント"
+    click_button "コメントする"
+    expect(page).to have_content 'コメントが投稿されました'
     end
 
     it"other_userがuserの作成したgymにコメントしたのを消す"do
+    @user = User.create(
+    name: "test",
+    email: "test@example.com",
+    password: "test"
+   )
+   @other_user = User.create(
+    name: "other_user",
+    email: "other_user@example.com",
+    password: "other_user"
+   )
+
+  # トップページへアクセス
+  visit root_path
+  # サインインページへ遷移
+  click_link "ログイン"
+  # メアドとパスワードを入力してログイン
+  fill_in "session[email]", with: @user.email
+  fill_in "session[password]", with: @user.password
+  click_button "ログインボタン"
+
+  @gym = create(:gym,user:@other_user,)
+  # タスク作成ページへ遷移
+  click_link "口コミ"
+  click_link "test"
+  fill_in 'comment[content]', with: "userのコメント"
+  click_button "コメントする"
+  expect(page).to have_content 'コメントが投稿されました'
+  click_button "コメントを表示"
+  click_link "削除する"
+
+  #brew cask install --appdir="/Applications" firefoxをする必要がある
+  #page.accept_confirm do
+   #link.click
+  #end
+
+  #expect(page).to have_content 'userのコメント'
     end
 
-    it"other_userがuserのコメントを消せない"do
+    it"userがother_userのコメントを消せない"do
+    @user = User.create(
+    name: "test",
+    email: "test@example.com",
+    password: "test"
+    )
+   @other_user = User.create(
+    name: "other_user",
+    email: "other_user@example.com",
+    password: "other_user"
+    )
+
+  # トップページへアクセス
+  visit root_path
+  # サインインページへ遷移
+  click_link "ログイン"
+  # メアドとパスワードを入力してログイン
+  fill_in "session[email]", with: @user.email
+  fill_in "session[password]", with: @user.password
+  click_button "ログインボタン"
+
+  @gym = create(:gym,user:@other_user,)
+  #@comment = create(:comment,gym:@gym,user:@other_user,)
+  @commnent = Comment.create(
+    content: "testcomment",
+  )
+  # タスク作成ページへ遷移
+  click_link "口コミ"
+  click_link "test"
+  click_button "コメントを表示"
+  expect(page).not_to have_content '削除する'
     end
   end
 end

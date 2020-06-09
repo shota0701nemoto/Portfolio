@@ -16,7 +16,7 @@ RSpec.describe GymsController,type: :controller do
       expect(response).to have_http_status "200"
     end
 
-    it "@gymsに全ての投稿@gymが含まれていること" do
+    it "@gymsに全ての投稿@gymが含まれている" do
       expect(assigns(:gyms)).to match_array([@gym])
     end
   end

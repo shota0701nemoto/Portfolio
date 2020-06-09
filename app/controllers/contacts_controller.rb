@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ContactsController < ApplicationController
   def new
     @contact = Contact.new
@@ -11,6 +13,7 @@ class ContactsController < ApplicationController
   def confirm
     @contact = Contact.new(contact_params)
     return if @contact.valid?
+
     flash[:success] = '正しく入力してください'
     render :new
   end
@@ -21,19 +24,20 @@ class ContactsController < ApplicationController
   end
 
   def create
-    #Contact.create!(contact_params)
+    # Contact.create!(contact_params)
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.contact_mail(@contact).deliver
       flash[:success] = 'お問い合わせを受け付けました'
       redirect_to root_path
     else
-      #flash[:success] = '正しく入力してください'
+      # flash[:success] = '正しく入力してください'
       render :new
     end
   end
 
   private
+
   def contact_params
     params.require(:contact).permit(:email, :message)
   end

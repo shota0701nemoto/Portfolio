@@ -31,14 +31,55 @@ RSpec.feature "Blogs", type: :feature do
 
   it"userがblogを更新する"do
 
+    @user = User.create(
+    name: "PortfolioTaro",
+    email: "test@example.com",
+    password: "test"
+    )
+    @blog = create(:blog,user:@user,)
+
+    visit root_path
+
+    click_link "ログイン"
+
+    fill_in "session[email]", with: @user.email
+    fill_in "session[password]", with: @user.password
+    click_button "ログインボタン"
+
+    click_link "コラム"
+    click_link @blog.title
+    click_link "編集"
+    click_button "投稿する"
+    expect(page).to have_content '更新しました'
   end
 
   it"userがblogを削除する"do
 
   end
 
-  it"other_userがblogを削除できない"do
+  it"userがother_userのblogを削除できない"do
+  @user = User.create(
+  name: "PortfolioTaro",
+  email: "test@example.com",
+  password: "test"
+  )
+  @other_user = User.create(
+    name: "other_user",
+    email: "other_user@example.com",
+    password: "other_user"
+  )
+  @blog = create(:blog,user:@other_user,)
 
+  visit root_path
+
+  click_link "ログイン"
+
+  fill_in "session[email]", with: @user.email
+  fill_in "session[password]", with: @user.password
+  click_button "ログインボタン"
+
+  click_link "コラム"
+  click_link @blog.title
+  expect(page).not_to have_content '削除'
   end
-
 end

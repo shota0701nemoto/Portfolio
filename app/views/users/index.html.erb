@@ -1,10 +1,6 @@
 <% provide(:title, 'All users') %>
-<h1>食事内容</h1>
-
 <%= will_paginate %>
 
-<ul class="users">
-  <%= render @users %>
-</ul>
+<h1 class="users"><%= render @users %></h1>
 
 <%= will_paginate %>

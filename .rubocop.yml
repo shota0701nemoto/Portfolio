@@ -1,5 +1,22 @@
-inherit_from:
-  - .rubocop_airbnb.yml
+Metrics/AbcSize:
+  Enabled: true
+  Max: 21
+
+  #classにコメントすなければいけないのを開放。
+Documentation:
+    Enabled: false
+
+AccessModifierIndentation:
+    Enabled: false
+
+ImplicitStringConcatenation:
+    Enabled: false
+
+IdenticalConditionalBranches:
+    Enabled: false
+
+MultilineTernaryOperator:
+    Enabled: false
 
   #1行に記述できる文字数の制限を無効。
 Metrics/LineLength:
@@ -12,6 +29,7 @@ AsciiComments:
 #以下にはrubocopで検証したくないフォルダを指定する
 AllCops:
   Exclude:
+    - 'app/models/ckeditor/*'
     - 'db/**/*'
     - 'bin/*'
     - 'config/environments/*'
@@ -24,3 +42,8 @@ AllCops:
     - 'spec/**/*'
     - 'config/routes.rb'
     - 'config/database.yml'
+    - 'config/*'
+    - 'test/**/*'
+    - 'node_modules/**/*'
+    - 'config/unicorn/*'
+    - 'lib/**/*'

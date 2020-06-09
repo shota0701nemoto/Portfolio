@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 class PictureUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
   process resize_to_limit: [200, 100]
-  
 
-    if Rails.env.production?
+  if Rails.env.production?
     storage :fog
   else
     storage :file
@@ -17,6 +18,6 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # アップロード可能な拡張子のリスト
   def extension_whitelist
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
 end
