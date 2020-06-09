@@ -9,7 +9,7 @@ class GymsController < ApplicationController
   def index
     # debugger
     @users = User.all
-    @gyms = Gym.paginate(page: params[:page], per_page: 18)
+    @gyms = Gym.paginate(page: params[:page], per_page: 6)
     @search = Gym.ransack(params[:q])
     @gym_search = @search.result
     @check = params[:q]
