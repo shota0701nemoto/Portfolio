@@ -6,7 +6,7 @@ class BlogsController < ApplicationController
 
   def index
     @user = User.all
-    @blogs = Blog.paginate(page: params[:page], per_page: 12)
+    @blogs = Blog.paginate(page: params[:page], per_page: 6)
     @title = 'コラム'
   end
 
