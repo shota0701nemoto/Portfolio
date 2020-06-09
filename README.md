@@ -61,6 +61,8 @@ https://www.kuchikomu.tokyo/
 # 【ER図】
 ![image](https://user-images.githubusercontent.com/59415604/83347079-4699ec00-a35d-11ea-8144-49514d61c55e.png)
 
+# 【AWS構成図】
+![AWS構成図](https://user-images.githubusercontent.com/59415604/84130246-fcf88200-aa7d-11ea-9f5a-0b14803cccfc.jpg)
 # 【意識したこと】 
 * 自身が学んだ技術、機能を盛り込むこと。
 * インフラ部分の構築。
