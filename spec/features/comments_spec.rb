@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Comments", type: :feature do
+RSpec.feature "Comments", js: true, type: :feature do
 
   describe "Comments" do
     it "userが自身で作成したgymにコメントをする" do
