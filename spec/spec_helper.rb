@@ -17,8 +17,6 @@
 require 'capybara/rspec'
 require 'selenium/webdriver'
 
-Selenium::WebDriver::Firefox::Binary.path =
-  "/opt/homebrew-cask/Caskroom/Firefox/latest/Firefox.app/Contents/MacOS/firefox"
 RSpec.configure do |config|
     config.before(:all) do
       FactoryBot.reload
