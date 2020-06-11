@@ -137,11 +137,11 @@ RSpec.feature "Comments", type: :feature do
   click_link "削除する"
 
   #brew cask install --appdir="/Applications" firefoxをする必要がある
-  #page.accept_confirm do
-   #link.click
-  #end
+  page.accept_confirm do
+   link.click
+  end
 
-  #expect(page).to have_content 'userのコメント'
+  expect(page).to have_content 'userのコメント'
     end
 
     it"userがother_userのコメントを消せない"do
